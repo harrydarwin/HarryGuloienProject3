@@ -1,0 +1,51 @@
+//Create data structure based on the questions below
+const answers = [
+    {
+   userClothing:  {
+        oldBandTee: `A little bit grunge and in-touch with music that came out before you were alive. You dont listen to Megadeath when your riding the bus alone but if someone asks about the Megadeath T-shirt you bought at "F As In Frank", you'll tell them you used to run that shit in when you were "younger".`,
+        vintage: `In touch with "real fashion", your jeans are not accessories to show off you're "assets", but rather to suggest your an old soul because while you were born in {$userAge}, you should have been born in the 70's and you don't mind smelling like the inside of your grandmothers vaccuum cleaner.`,
+        diy: `Probably aspiring to look like Zooey Deschanel but appearing somewhere between that and homeless, you will find beauty in another hipsters garbage - literally. Dumpster diving, thrift shop hunting, grandmas old clothes pilfering to find those special items that are nice but not nice enough that you can't cut, mame, pierce and colour them. You take pride in your ability to turn nothing into something even though the fact your wears are homemade often shows.`,
+        formal: `Someone who may not classify themselves as a hipster. Just a person who likes to look clean and presentable - whats wrong with that? It's also not like you only wear collard shirts, you like to switch it up - tomorrow you may rock a more casual button down over a t-shirt or even some pastel shorts. Perhaps a turtle neck for a touch of sophistication while not being overly formal. You prefer glasses to contact lenses but don't appreciate people calling you Steve Jobs when you do wear that snug turtleneck.`,
+        redFlannel: `A follower of fashion, you feel original in your choice of garments but as you stand there in your flannel and your rolled up beanie you realise that everone else at the Mumford & Sons concert is also wearing tight jeans on top of their vans. If you're able to grow a full beard, or better yet, a moustache; you probably will. This may be the first time you've considered that in your efforts to be different, you have become exactly the same.`
+    },
+    userPassion: {
+        photography: `Have you ever bought an XLR camera or are you more of a polaroid person? Have you read extensivel about Camera Obscura (No not the hipster band), or are you blind to the fact that modern day photography tech does all the work for you. It is unlikely you've ever taken a class or even read up on lighting and yet you are a pro self taught pro. Dont get me wrong there are worse hobbies for a hipster to take up then feeding the ego of nude influencers and hanging out with OnlyFans girls with the pretense of being a photographer, unless of course you are the type to take "ironic" pictures of yourself taking a picture.`,
+        food: `"You must come to Chantecler, they've the freshest oysters in the City", words that are less than foreign to you. The foodie hipster with a refined palate and an undying taste for showing your friends new spots around the city. You probably love 416 Snack Bar (fair, who doesn't), and use terms like "farm to table", and invest in putting the most ridiculous culinary creations in to your body. Things infused with beer, or just infused for that matter. You also enjoy ferments or preserves - anything in a old timey jar that tastes like vinigar and herbs.`,
+        beer: `Many of your sumer days have been spent in Trinity Bellwoods Park drinking Jelly Kings and Whitsharks (I know you know what I am talking about). You will go out of your way to find the newest brewery to tell your friends about and the stinkier the brew the better. You have likely forgone lagers and pilsners for their much louder friends; IPA, porters and stouts. Despite your having no consistancy to what you like, you do tend to steer towards fancy cans with silly names that contain obscure ingredients. Perhaps a milkshake stout on a fall day or a crispy cool double white IPA with a book on a warm day - Or my personal favourite, a Blood of Cthulu, a 9.5% ABV Imperial Stout with raspberries, cranberries, and tart cherries - ingredients anyone born before 1980 would say doesn't belong in beer but rather in a thanksgiving pie.`,
+        music: `I will bet that you say you "know" people that you have never met or maybe just in passing because somehow that raises your level of worth. The record player you bought from Urban Outfitter has become the focal point of a corner of your appartment along with the obscure records you bought because, "they just sound the best and no other medium can provide that level of authenticity". You probably frequent niche concerts at dirty hidden venues and used to go to The Weekends shows before he made it big. You might even play music for abundantly small crowds in dirty venues yourself but the reality is: the band you played with in highschool was the best you'll ever sound, and the other members all went to university and moved on... why haven't you?`,
+        literature: 
+    },
+    userMusic: {
+        manuChao: `You're the type who loves coachella and whos drugs of choice are likely psychadelic. you might even subscribe to crystals, astrology or some other made up shit to justify being an asshole. You probably listen to animal collective (beyond the choice you made in our quiz) and you probably try your hardest to live a "drama free life", but are willing to write people off for eating meat or particiapting in the global economy. Do you refer to establishment as "The Man"?`,
+        florence: `Even though you may not identify as a hipster, your attempt at any other identity has failed you. You are not the strongly opinionated type but you know what you are not (or you thought you did) and while your music taste if terrible you are possably the closest of the bunch to escaping the hipster label - you've actually fallen here by complete mistake.`,
+        migos: `Probably a lover of 90's hip-hop and believe that there isn't much good music comming out these days but you are willing to settle for what we in the industry call "hot trash" - of course refering to music with excellent production value but extremely poor content. But I dont need to tell you that because you are a rap afficionado. I wonder how quickly you can quote a Daddy Cane line?`,
+        brightEyes: `While you probably had an emo phase (when that was a thing), you've since grown out of it, however, you still have deeper emotions than your average hipster, or anyone for that matter. Heart break and failure hurt you just a little bit more and you're not afraidn to let people know about it on social media. Probably like Elliot Smith (RIP) and talk about the 27 club while pondering existential questions both alone and with your peers.`,
+        tameImpala: `You may be caught saying things like, "I knew them before they were cool", forgetting that things that ARE "cool", can simply not be - this is the contradictory dichotomy of the hipster. You are the type to attempt a nonchalant approach to being cool yourself - a piece of advice - don't push the envolope too far otherwise you risk confrontation with that exact same contradiction.`,
+        neither: "You could possibly be the worst type of hipster. The hipster who doesn't believe they are a hipster, because you aren't; you're an artist. In fact, hipsters are beneath you, so is pretty much everyone else for that matter. You are an elitest and you don't follow trends, if anything worth your while does come up, you will hear about it from your friends."
+
+    }
+
+}]
+
+
+//Ask for and store user name
+
+//How old are you?
+//take curdate and subrtract age to find birth year and store
+
+
+//Clothing choice with dropdown menu - Old band T, OMG vintage, Made it myself, A nice collard shirt and a pair of slacks, red plaid flannel obvi
+//store selection in a variable
+
+//Passion selection with dropdown menu - Photography, food, beer/wine, music, literature
+//store selection
+
+// music dropdown - Manu Chao, Florence and the Machine, migos, bright eyes or tame impala
+//store selection
+
+
+//Pumped up kicks? radio button (yes or no) store selection
+
+//clothing variable correpsonds with picture in data structure to be displayed upon scroll down
+
+//each varible (userInput) will pull a piece of the blurb from the data structure to put together a full hipster profile 

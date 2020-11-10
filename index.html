@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipster Me Project 3</title>
+</head>
+<body>
+    <header>
+        <h1>What Type of <span>Hipster</span> Are You?</h1>
+
+        <h2>Use <span>Hipster Me</span> to find your true hipster profile. Be ready to be amazed at the accuracy of our advanced profiling techniques</h2>
+
+        <h3>While our intention is not to hurt feelings, our expert profilers do tend to come of a little rude. If you need to hang your ego at the door please use our Ego-Check Station</h3>
+
+        <a class="buttonA" href="#userInfo">Profile Me!</a>
+    </header>
+
+    <main>
+        <form>
+            <section id="userInfo">
+                <div>
+                    <fieldset>
+                        <legend class="srOnly">A little about you</legend>
+                            <label for="userName">What is your name?</label>
+                            <input type="text" name="userName" id="userName" required>
+                            <label  for="userAge">How old are you?</label>
+                            <input type="text" name="userAge" id="userAge"  required>
+                    </fieldset>
+                </div>
+                <a class="buttonA" href="#questionOne">Next!</a>
+            </section>
+
+            <section id="questionOne">
+                <div>
+                    <label for="userClothing">Which of these garment options best describes you?</label>
+                    <select name="userClothing" id="userClothing" required>
+                        <option value="oldBandTee">Old Band Tee!</option>
+                        <option value="vintage"> OMG Vintage / Thrift!</option>
+                        <option value="diy">Made it myself!</option>
+                        <option value="formal">A collard shirt and a nice pair of slacks!</option>
+                        <option value="redFlannel">A classic red flannel!</option>
+                        <option value="#" selected disabled>What you're rockin' to the function.</option>
+                    </select>
+                </div>
+                <a class="buttonA" href="#questionTwo">Next!</a>
+            </section>
+            
+            <section>
+                <div id="questionTwo">
+                    <label for="userPassion">Which are you most passionate about?</label>
+                    <select name="userPassion" id="userPassion" required>
+                        <option value="photography">Photography</option>
+                        <option value="food">Food</option>
+                        <option value="beer">Beer</option>
+                        <option value="music">Music</option>
+                        <option value="literature">Literature</option>
+                        <option value="#" selected disabled>Perhaps a little farm to table?</option>
+                    </select>
+                </div>
+                <a class="buttonA" href="#questionThree">Next!</a>
+            </section>
+
+            <section>
+                <div id="questionThree">
+                    <label for="userMusic">Whos music floats your meta-physical boat?</label>
+                    <select name="userMusic" id="userMusic" required>
+                        <option value="manuChao">Manu Chao</option>
+                        <option value="florence">Florence and the Machine</option>
+                        <option value="migos">Migos</option>
+                        <option value="brightEyes">Bright Eyes</option>
+                        <option value="tameImpala">Tame Impala</option>
+                        <option value="neither">I'd rather shove hot pokers in my ears.</option>
+                        <option value="#" selected disabled>omg you don't know them?</option>
+                    </select>
+                </div>
+            <a class="buttonA" href="#questionFour">Next!</a>
+            </section>
+
+            <section id="questionFour">
+                <div>
+                    <legend>Pumped up kicks? (We'll assume yes).</legend>
+                    <label for="yes">Yes!</label>
+                    <input type="radio" name="pumpedKicks" id="yes" checked>
+                    <label for="no">No!</label>
+                    <input type="radio" name="pumpedKicks" id="no">
+                </div>
+                <a class="buttonA" href="#goTime">Next!</a>
+            </section>
+
+            <section>
+                <button id="goTime" type="submit">What type of hipster am I?</button>
+            </section>
+        </form>
+
+        <section id="userProfile">
+
+            <ul class="profilePlace">
+            </ul>
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
+</body>
+</html>
