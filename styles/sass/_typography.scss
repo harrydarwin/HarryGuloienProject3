@@ -1,0 +1,69 @@
+body {
+    font-family: $heebo;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-family: $miriam;
+    font-size: 15rem;
+    // text-align: center;
+    & span {
+        display: block;
+        color: $yellow;
+        font-weight: 700;
+    }
+}
+
+h2  {
+    font-size: 6rem;
+    line-height: 5.5rem;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+    & span {
+        color: $yellow;
+    }
+}
+
+h3 {
+    font-size: 2.5rem;
+    width: 60%;
+    position: absolute;
+    font-weight: 300;
+    font-style: italic;
+    & i {
+        color: $yellow;
+        position: relative;
+        bottom: 5px;
+    }
+}
+
+
+
+.questionBox {
+font-size: 5rem;
+& label {
+    font-size: 4rem;
+}
+}
+
+
+.buttonA {
+    font-size: 6rem;
+    font-weight: bold;
+    font-family: $miriam;
+    text-transform: uppercase;
+}
+
+.dataBox label {
+    font-size: 7rem;
+    font-style: italic;
+}
+
+.dataBox input {
+    font-size: 4.5rem;
+    text-align: center;
+}

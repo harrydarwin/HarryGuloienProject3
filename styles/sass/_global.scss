@@ -1,0 +1,140 @@
+html {
+    font-size: 62.5%;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit; text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+input {
+    border: none;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+section {
+   height: 100vh; 
+}
+
+fieldset {
+    width: 50%;
+}
+
+legend {
+    box-shadow: -25px 34px 3px -28px $purple;
+}
+
+input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+
+.questionBox label {
+    position: relative;
+    cursor: pointer;
+}
+
+.questionBox label::before {
+    content: "";
+    background-image: url(../assets/moustacheEmpty.png);
+    position: absolute;
+    left: -55px;
+    bottom: 0px;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.questionBox div:hover label::before,
+.questionBox div:focus label::before {
+    background-image: url(../assets/moustacheFull.png);
+}
+
+input:checked + label::before {
+    background-image: url(../assets/moustacheFull.png);
+}
+
+
+.questionBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+
+.container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0;
+}
+
+.flexBox {
+    display: flex;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.buttonA {
+    height: 80px;
+    width: 400px;
+    background: $yellow;
+    border-radius: 25%;
+    border-left: 8px solid darken($yellow, 5%);
+    border-bottom: 8px solid darken($yellow, 5%); 
+    padding-top: 5px;
+    text-align: center;
+    
+}

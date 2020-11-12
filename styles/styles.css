@@ -234,3 +234,375 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input {
+  border: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+section {
+  height: 100vh;
+}
+
+fieldset {
+  width: 50%;
+}
+
+legend {
+  -webkit-box-shadow: -25px 34px 3px -28px #2A0C4E;
+          box-shadow: -25px 34px 3px -28px #2A0C4E;
+}
+
+input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.questionBox label {
+  position: relative;
+  cursor: pointer;
+}
+
+.questionBox label::before {
+  content: "";
+  background-image: url(../assets/moustacheEmpty.png);
+  position: absolute;
+  left: -55px;
+  bottom: 0px;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.questionBox div:hover label::before,
+.questionBox div:focus label::before {
+  background-image: url(../assets/moustacheFull.png);
+}
+
+input:checked + label::before {
+  background-image: url(../assets/moustacheFull.png);
+}
+
+.questionBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 50px;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0;
+}
+
+.flexBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flexColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.buttonA {
+  height: 80px;
+  width: 400px;
+  background: #F0E100;
+  border-radius: 25%;
+  border-left: 8px solid #d7c900;
+  border-bottom: 8px solid #d7c900;
+  padding-top: 5px;
+  text-align: center;
+}
+
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 15rem;
+}
+
+h1 span {
+  display: block;
+  color: #F0E100;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 6rem;
+  line-height: 5.5rem;
+  font-weight: 300;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h2 span {
+  color: #F0E100;
+}
+
+h3 {
+  font-size: 2.5rem;
+  width: 60%;
+  position: absolute;
+  font-weight: 300;
+  font-style: italic;
+}
+
+h3 i {
+  color: #F0E100;
+  position: relative;
+  bottom: 5px;
+}
+
+.questionBox {
+  font-size: 5rem;
+}
+
+.questionBox label {
+  font-size: 4rem;
+}
+
+.buttonA {
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: "Amatic SC", cursive;
+  text-transform: uppercase;
+}
+
+.dataBox label {
+  font-size: 7rem;
+  font-style: italic;
+}
+
+.dataBox input {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+header {
+  background: #3A7CA5;
+}
+
+header section {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header2 {
+  height: 70vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.egoBox {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+
+.egoCheck {
+  position: relative;
+}
+
+.egoCheck i {
+  color: #F0E100;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  font-size: 1.8rem;
+}
+
+.ego {
+  height: 100px;
+  width: 100px;
+}
+
+main section {
+  background-color: #E5D4CE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
+}
+
+main section:nth-of-type(2n) {
+  background-color: #3A7CA5;
+}
+
+#userInfo {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#userInfo .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+
+.dataBox {
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dataBox input {
+  height: 50px;
+  margin-top: 10px;
+}
+
+.dataBox input:first-of-type {
+  width: 50%;
+}
+
+.dataBox input:last-of-type {
+  width: 25%;
+}
+
+#questionOne {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.imageContainer {
+  height: auto;
+}
+
+.imageBox {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.imageBorder {
+  background-color: #2A0C4E;
+  height: 5px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.questionBox {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 50%;
+}
+
+#questionTwo {
+  position: relative;
+}
+
+.image2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.image2 img {
+  height: 80%;
+  width: 80%;
+}

@@ -3,84 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0bbaf28253.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Hipster Me Project 3</title>
 </head>
 <body>
-    <header>
-        <h1>What Type of <span>Hipster</span> Are You?</h1>
+    <header class="wrapper" id="home">
+        <section class="flexColumn">
+            <div class="container">
+                <h1>What Type of <span>Hipster</span> Are You?</h1>
+            </div>
+        </section>
+        <section class="flexColumn header2 container">
 
-        <h2>Use <span>Hipster Me</span> to find your true hipster profile. Be ready to be amazed at the accuracy of our advanced profiling techniques</h2>
+                <h2>Use <span>Hipster Me</span> to find your true <span>hipster profile</span>.</h2>
 
-        <h3>While our intention is not to hurt feelings, our expert profilers do tend to come of a little rude. If you need to hang your ego at the door please use our Ego-Check Station</h3>
+                <h3><i class="fas fa-asterisk"></i>While our intention is not to hurt feelings, our expert profilers do tend to come of a little rude. If you need to hang your ego at the door please use our Ego-Check Station</h3>
 
-        <button class="ego"><img src="./assets/egoCheck.png" alt=""></button>
+                <div class="egoBox">
+                <div class="egoCheck">
+                    <i class="fas fa-asterisk"></i>
+                    <button class="ego"><img src="./assets/egoCheck.png" alt="Little booth with an attendant where you can check your ego (like a coat check)"></button>
+                </div>
+                </div>
 
-        <a class="buttonA" href="#userInfo">Profile Me!</a>
+                <a class="buttonA" href="#userInfo">Profile Me!</a>
+
+        </section>
     </header>
 
-    <main>
+    <main class="wrapper ">
         <form>
-            <section id="userInfo">
-                <div>
-                    <fieldset>
-                        <legend class="srOnly">A little about you</legend>
-                            <label for="userName">What is your name?</label>
-                            <input type="text" name="userName" id="userName" required>
-                            <label  for="userAge">How old are you?</label>
-                            <input type="text" name="userAge" id="userAge"  required>
-                    </fieldset>
+            <section id="userInfo" class="flexColumn">
+                <div class="container flexColumn">
+                        <fieldset>
+                            <legend class="srOnly">A little about you</legend>
+                                <div class="dataBox flexColumn">
+                                    <label for="userName">What is your name?</label>
+                                    <input type="text" name="userName" id="userName" required>
+                                    <label  for="userAge">How old are you?</label>
+                                    <input type="text" name="userAge" id="userAge"  required>
+                                </div>
+                        </fieldset>
+                    </div>
                 </div>
                 <a class="buttonA" href="#questionOne">Next!</a>
             </section>
 
-            <section id="questionOne">
-                <div>
-                    <label for="userClothing">Which of these garment options best describes you?</label>
-                    <select name="userClothing" id="userClothing" required>
-                        <option value="oldBandTee">Old Band Tee!</option>
-                        <option value="vintage"> OMG Vintage / Thrift!</option>
-                        <option value="diy">Made it myself!</option>
-                        <option value="formal">A collard shirt and a nice pair of slacks!</option>
-                        <option value="redFlannel">A classic red flannel!</option>
-                        <option value="#" selected disabled>What you're rockin' to the function.</option>
-                    </select>
+            <section id="questionOne" class="flexColumn">
+                <div class="container imageBox flexBox">
+                    <div class="imageContainer">
+                        <img src="./assets/phoneHipster.png" alt="Very hip gentlemen on a segway">
+                        <div class="imageBorder">
+                        </div>
+                    </div>
+                    <div class="questionBox">
+                        <legend>Which of these garment options best describes you?</legend>
+                        <div>
+                            <input type="radio" name="userClothing" id="oldBandTee" value="oldBandTee">
+                            <label for="oldBandTee">Old Band Tee!</label>
+                        </div>
+                        <div>
+                            <label for="vintage">OMG Vintage / Thrift!</label>
+                            <input type="radio" name="userClothing" id="vintage" value="vintage" >
+                        </div>
+                        <div>
+                            <label for="diy">Made it myself!</label>
+                            <input type="radio" name="userClothing" id="diy" value="diy" >
+                        </div>
+                        <div>
+                            <label for="formal">A collard shirt and a nice pair of slacks!</label>
+                            <input type="radio" name="userClothing" id="formal" value="formal" >
+                        </div>
+                        <div>
+                            <label for="redFlannel">A classic red flannel!</label>
+                            <input type="radio" name="userClothing" id="redFlannel" value="redFlannel" >
+                        </div>
+                    </div>
                 </div>
                 <a class="buttonA" href="#questionTwo">Next!</a>
+                
             </section>
             
-            <section>
-                <div id="questionTwo">
-                    <label for="userPassion">Which are you most passionate about?</label>
-                    <select name="userPassion" id="userPassion" required>
-                        <option value="photography">Photography</option>
-                        <option value="food">Food</option>
-                        <option value="beer">Beer</option>
-                        <option value="music">Music</option>
-                        <option value="literature">Literature</option>
-                        <option value="#" selected disabled>Perhaps a little farm to table?</option>
-                    </select>
+            <section id="questionTwo">
+                <div class="container imageBox flexBox">
+                    <div class="questionBox">
+                        <legend>Which are you most passionate about?</legend>
+                        <div>
+                            <label for="photography">Photography</label>
+                            <input type="radio" name="userPassion" id="photography" value="photography">
+                        </div>
+                        <div>
+                            <label for="food">Food</label>
+                            <input type="radio" name="userPassion" id="food" value="food">
+                        </div>
+                        <div>
+                            <label for="beer">Beer</label>
+                            <input type="radio" name="userPassion" id="beer" value="beer">
+                        </div>
+                        <div>
+                            <label for="music">Music</label>
+                            <input type="radio" name="userPassion" id="music" value="music">
+                        </div>
+                        <div>
+                            <label for="liturature">Liturature</label>
+                            <input type="radio" name="userPassion" id="liturature" value="liturature">
+                        </div>
+                    </div>
+                    <div class="imageContainer image2">
+                        <img src="./assets/hipsterOnWheels.png" alt="Very hip gentlemen on a segway">
+                        <div class="imageBorder">
+                        </div>
+                    </div>
                 </div>
                 <a class="buttonA" href="#questionThree">Next!</a>
             </section>
 
-            <section>
-                <div id="questionThree">
-                    <label for="userMusic">Whos music floats your meta-physical boat?</label>
-                    <select name="userMusic" id="userMusic" required>
-                        <option value="manuChao">Manu Chao</option>
-                        <option value="florence">Florence and the Machine</option>
-                        <option value="migos">Migos</option>
-                        <option value="brightEyes">Bright Eyes</option>
-                        <option value="tameImpala">Tame Impala</option>
-                        <option value="neither">I'd rather shove hot pokers in my ears.</option>
-                        <option value="#" selected disabled>omg you don't know them?</option>
-                    </select>
+            <section id="questionThree">
+                <div class="container imageBox flexBox">
+                    <div class="questionBox">
+                        <legend>Whos music floats your meta-physical boat (besides Bon Iver)?</legend>
+                        <div>
+                            <label for="manuChao">Manu Chao</label>
+                            <input type="radio" name="userMusic" id="manuChao" value="manuChao">
+                        </div>
+                        <div>
+                            <label for="florence">Florence and the Machine</label>
+                            <input type="radio" name="userMusic" id="florence" value="florence">
+                        </div>
+                        <div>
+                            <label for="migos">Migos</label>
+                            <input type="radio" name="userMusic" id="migos" value="migos">
+                        </div>
+                        <div>
+                            <label for="brightEyes">Bright Eyes</label>
+                            <input type="radio" name="userMusic" id="brightEyes" value="brightEyes">
+                        </div>
+                        <div>
+                            <label for="tameImpala">Tame Impala</label>
+                            <input type="radio" name="userMusic" id="tameImpala" value="tameImpala">
+                        </div>
+                    </div>
                 </div>
             <a class="buttonA" href="#questionFour">Next!</a>
             </section>
 
             <section id="questionFour">
-                <div>
+                <div class="container questionBox">
                     <legend>Pumped up kicks? (We'll assume yes).</legend>
                     <label for="yes">Yes!</label>
                     <input type="radio" name="pumpedKicks" id="yes" checked>
@@ -90,20 +160,20 @@
                 <a class="buttonA" href="#goTime">Next!</a>
             </section>
 
-            <section>
-                <button id="goTime" type="submit">What type of hipster am I?</button>
+            <section id="goTime">
+                <button type="submit">What type of hipster am I?</button>
             </section>
         </form>
 
         <section id="userProfile">
-
-            <ul class="profilePlace">
-            </ul>
-
+            <div class="container">
+                <ul class="profilePlace">
+                </ul>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="wrapper">
 
     </footer>
     
