@@ -41,6 +41,10 @@ h3 {
     }
 }
 
+main {
+   font-family: $miriam;
+   font-weight: 700;
+}
 
 
 .questionBox {
@@ -66,4 +70,14 @@ font-size: 5rem;
 .dataBox input {
     font-size: 4.5rem;
     text-align: center;
+}
+
+.pumpedKicks label {
+    font-size: 5rem;
+}
+
+button[type=submit] {
+    font-family: $miriam;
+    font-size: 8rem;
+    font-weight: 700;
 }

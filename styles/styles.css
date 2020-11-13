@@ -300,54 +300,6 @@ legend {
           box-shadow: -25px 34px 3px -28px #2A0C4E;
 }
 
-input[type=radio] {
-  position: absolute;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
-.questionBox label {
-  position: relative;
-  cursor: pointer;
-}
-
-.questionBox label::before {
-  content: "";
-  background-image: url(../assets/moustacheEmpty.png);
-  position: absolute;
-  left: -55px;
-  bottom: 0px;
-  background-size: contain;
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.questionBox div:hover label::before,
-.questionBox div:focus label::before {
-  background-image: url(../assets/moustacheFull.png);
-}
-
-input:checked + label::before {
-  background-image: url(../assets/moustacheFull.png);
-}
-
-.questionBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding-left: 50px;
-}
-
 .container {
   width: 90%;
   height: 100%;
@@ -381,10 +333,19 @@ input:checked + label::before {
   width: 400px;
   background: #F0E100;
   border-radius: 25%;
-  border-left: 8px solid #d7c900;
-  border-bottom: 8px solid #d7c900;
+  border-left: 10px solid #d7c900;
+  border-bottom: 10px solid #d7c900;
   padding-top: 5px;
   text-align: center;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  -webkit-box-shadow: -12px 12px 5px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -12px 12px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.buttonA:active {
+  border-left: 2px solid #d7c900;
+  border-bottom: 2px solid #d7c900;
 }
 
 body {
@@ -432,6 +393,11 @@ h3 i {
   bottom: 5px;
 }
 
+main {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+}
+
 .questionBox {
   font-size: 5rem;
 }
@@ -455,6 +421,16 @@ h3 i {
 .dataBox input {
   font-size: 4.5rem;
   text-align: center;
+}
+
+.pumpedKicks label {
+  font-size: 5rem;
+}
+
+button[type=submit] {
+  font-family: "Amatic SC", cursive;
+  font-size: 8rem;
+  font-weight: 700;
 }
 
 header {
@@ -561,6 +537,49 @@ main section:nth-of-type(2n) {
   width: 25%;
 }
 
+input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.questionBox label {
+  position: relative;
+  cursor: pointer;
+}
+
+.questionBox label::before {
+  content: "";
+  background-image: url(../assets/moustacheEmpty.png);
+  position: absolute;
+  left: -55px;
+  bottom: 0px;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+input:checked + label::before {
+  background-image: url(../assets/moustacheFull.png);
+}
+
+.questionBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 50px;
+}
+
 #questionOne {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -591,6 +610,7 @@ main section:nth-of-type(2n) {
   -ms-flex-item-align: start;
       align-self: flex-start;
   width: 50%;
+  position: relative;
 }
 
 #questionTwo {
@@ -605,4 +625,41 @@ main section:nth-of-type(2n) {
 .image2 img {
   height: 80%;
   width: 80%;
+}
+
+.pumpedKicks {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 20%;
+}
+
+.pumpedKicks div {
+  width: 40%;
+}
+
+.pumpedKicks div:nth-of-type(2) {
+  text-align: end;
+  padding-right: 65px;
+}
+
+.fuming {
+  width: 75%;
+  justify-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 13%;
+}
+
+.q4 {
+  position: relative;
+}
+
+button[type=submit] {
+  cursor: pointer;
+  margin: auto;
+  background: #F0E100;
+  border-bottom: 10px solid #d7c900;
 }

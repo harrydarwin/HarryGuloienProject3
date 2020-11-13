@@ -60,51 +60,6 @@ legend {
     box-shadow: -25px 34px 3px -28px $purple;
 }
 
-input[type=radio] {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
-}
-
-
-.questionBox label {
-    position: relative;
-    cursor: pointer;
-}
-
-.questionBox label::before {
-    content: "";
-    background-image: url(../assets/moustacheEmpty.png);
-    position: absolute;
-    left: -55px;
-    bottom: 0px;
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    cursor: pointer;
-}
-
-
-.questionBox div:hover label::before,
-.questionBox div:focus label::before {
-    background-image: url(../assets/moustacheFull.png);
-}
-
-input:checked + label::before {
-    background-image: url(../assets/moustacheFull.png);
-}
-
-
-.questionBox {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 50px;
-}
-
-
 .container {
     width: 90%;
     height: 100%;
@@ -132,9 +87,20 @@ input:checked + label::before {
     width: 400px;
     background: $yellow;
     border-radius: 25%;
-    border-left: 8px solid darken($yellow, 5%);
-    border-bottom: 8px solid darken($yellow, 5%); 
+    border-left: 10px solid darken($yellow, 5%);
+    border-bottom: 10px solid darken($yellow, 5%); 
     padding-top: 5px;
     text-align: center;
+    transition: all .1s ease-in-out;
+    box-shadow: -12px 12px 5px 0px rgba(0,0,0,0.75);
+}
+
+.buttonA:active {
+    border-left: 2px solid darken($yellow, 5%);
+    border-bottom: 2px solid darken($yellow, 5%); 
+}
+.buttonA:hover,
+.buttonA:focus {
+     
     
 }

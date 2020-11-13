@@ -54,7 +54,7 @@
             <section id="questionOne" class="flexColumn">
                 <div class="container imageBox flexBox">
                     <div class="imageContainer">
-                        <img src="./assets/phoneHipster.png" alt="Very hip gentlemen on a segway">
+                        <img src="./assets/phoneHipster.png" alt="Very hip gentlemen with a beard holding a cellphone">
                         <div class="imageBorder">
                         </div>
                     </div>
@@ -65,20 +65,20 @@
                             <label for="oldBandTee">Old Band Tee!</label>
                         </div>
                         <div>
-                            <label for="vintage">OMG Vintage / Thrift!</label>
                             <input type="radio" name="userClothing" id="vintage" value="vintage" >
+                            <label for="vintage">OMG Vintage / Thrift!</label>
                         </div>
                         <div>
-                            <label for="diy">Made it myself!</label>
                             <input type="radio" name="userClothing" id="diy" value="diy" >
+                            <label for="diy">Made it myself!</label>
                         </div>
                         <div>
-                            <label for="formal">A collard shirt and a nice pair of slacks!</label>
                             <input type="radio" name="userClothing" id="formal" value="formal" >
+                            <label for="formal">A collard shirt and a nice pair of slacks!</label>
                         </div>
                         <div>
-                            <label for="redFlannel">A classic red flannel!</label>
                             <input type="radio" name="userClothing" id="redFlannel" value="redFlannel" >
+                            <label for="redFlannel">A classic red flannel!</label>
                         </div>
                     </div>
                 </div>
@@ -91,24 +91,24 @@
                     <div class="questionBox">
                         <legend>Which are you most passionate about?</legend>
                         <div>
-                            <label for="photography">Photography</label>
                             <input type="radio" name="userPassion" id="photography" value="photography">
+                            <label for="photography">Photography</label>
                         </div>
                         <div>
-                            <label for="food">Food</label>
                             <input type="radio" name="userPassion" id="food" value="food">
+                            <label for="food">Food</label>
                         </div>
                         <div>
-                            <label for="beer">Beer</label>
                             <input type="radio" name="userPassion" id="beer" value="beer">
+                            <label for="beer">Beer</label>
                         </div>
                         <div>
-                            <label for="music">Music</label>
                             <input type="radio" name="userPassion" id="music" value="music">
+                            <label for="music">Music</label>
                         </div>
                         <div>
-                            <label for="liturature">Liturature</label>
                             <input type="radio" name="userPassion" id="liturature" value="liturature">
+                            <label for="liturature">Liturature</label>
                         </div>
                     </div>
                     <div class="imageContainer image2">
@@ -122,27 +122,32 @@
 
             <section id="questionThree">
                 <div class="container imageBox flexBox">
+                    <div class="imageContainer">
+                        <img src="./assets/purpleHipster.png" alt="Hip lady with purple hair and glasses">
+                        <div class="imageBorder">
+                        </div>
+                    </div>
                     <div class="questionBox">
                         <legend>Whos music floats your meta-physical boat (besides Bon Iver)?</legend>
                         <div>
-                            <label for="manuChao">Manu Chao</label>
                             <input type="radio" name="userMusic" id="manuChao" value="manuChao">
+                            <label for="manuChao">Manu Chao</label>
                         </div>
                         <div>
-                            <label for="florence">Florence and the Machine</label>
                             <input type="radio" name="userMusic" id="florence" value="florence">
+                            <label for="florence">Florence and the Machine</label>
                         </div>
                         <div>
-                            <label for="migos">Migos</label>
                             <input type="radio" name="userMusic" id="migos" value="migos">
+                            <label for="migos">Migos</label>
                         </div>
                         <div>
-                            <label for="brightEyes">Bright Eyes</label>
                             <input type="radio" name="userMusic" id="brightEyes" value="brightEyes">
+                            <label for="brightEyes">Bright Eyes</label>
                         </div>
                         <div>
-                            <label for="tameImpala">Tame Impala</label>
                             <input type="radio" name="userMusic" id="tameImpala" value="tameImpala">
+                            <label for="tameImpala">Tame Impala</label>
                         </div>
                     </div>
                 </div>
@@ -150,12 +155,20 @@
             </section>
 
             <section id="questionFour">
-                <div class="container questionBox">
+                <div class="container questionBox q4">
                     <legend>Pumped up kicks? (We'll assume yes).</legend>
-                    <label for="yes">Yes!</label>
-                    <input type="radio" name="pumpedKicks" id="yes" checked>
-                    <label for="no">No!</label>
-                    <input type="radio" name="pumpedKicks" id="no">
+                    <div class="flexBox pumpedKicks">
+                        <div>
+                            <input type="radio" name="pumpedKicks" id="yes" checked>
+                            <label for="yes">Yes!</label>
+                        </div>
+                        
+                        <div>
+                            <input type="radio" name="pumpedKicks" id="no">
+                            <label for="no">No!</label>
+                        </div>
+                    </div>
+                    <img class="fuming" src="./assets/fumingHipster.png" alt="confused hipster with fumes coming from his head">
                 </div>
                 <a class="buttonA" href="#goTime">Next!</a>
             </section>

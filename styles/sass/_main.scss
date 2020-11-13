@@ -36,6 +36,50 @@ main section:nth-of-type(2n) {
     }
 }
 
+input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+
+.questionBox label {
+    position: relative;
+    cursor: pointer;
+}
+
+.questionBox label::before {
+    content: "";
+    background-image: url(../assets/moustacheEmpty.png);
+    position: absolute;
+    left: -55px;
+    bottom: 0px;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+// .questionBox div:hover label::before,
+// .questionBox div:focus label::before {
+//     background-image: url(../assets/moustacheFull.png);
+// }
+
+input:checked + label::before {
+    background-image: url(../assets/moustacheFull.png);
+}
+
+
+.questionBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
 #questionOne {
     justify-content: space-between;
 }
@@ -57,9 +101,9 @@ main section:nth-of-type(2n) {
 }
 
 .questionBox {
-    // text-align: center;
     align-self: flex-start;
     width: 50%;
+    position: relative;
 }
 
 #questionTwo {
@@ -74,4 +118,37 @@ main section:nth-of-type(2n) {
 .image2 img {
     height: 80%;
     width: 80%;
+}
+
+.pumpedKicks {
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20%;
+    & div {
+        width: 40%;
+    }
+    & div:nth-of-type(2) {
+        text-align: end;
+        padding-right: 65px;
+    }
+}
+
+.fuming {
+    width: 75%;
+    justify-self: flex-end;
+    position:absolute;
+    bottom: 0;
+    right: 13%;
+}
+
+.q4 {
+    position: relative;
+}
+
+button[type=submit] {
+    cursor: pointer;
+    margin: auto;
+    background: $yellow;
+    border-bottom: 10px solid darken($yellow, 5%); 
 }
