@@ -1,7 +1,9 @@
+const hipApp = {};
+
 //Create data structure based on the questions below
-const answers = [
-    {
-   userClothing:  {
+hipApp.answers = {
+    
+   userClothing: {
         oldBandTee: `A little bit grunge and in-touch with music that came out before you were alive. You dont listen to Megadeath when your riding the bus alone but if someone asks about the Megadeath T-shirt you bought at "F As In Frank", you'll tell them you used to run that shit in when you were "younger".`,
         vintage: `In touch with "real fashion", your jeans are not accessories to show off you're "assets", but rather to suggest your an old soul because while you were born in {$userAge}, you should have been born in the 70's and you don't mind smelling like the inside of your grandmothers vaccuum cleaner.`,
         diy: `Probably aspiring to look like Zooey Deschanel but appearing somewhere between that and homeless, you will find beauty in another hipsters garbage - literally. Dumpster diving, thrift shop hunting, grandmas old clothes pilfering to find those special items that are nice but not nice enough that you can't cut, mame, pierce and colour them. You take pride in your ability to turn nothing into something even though the fact your wears are homemade often shows.`,
@@ -28,10 +30,84 @@ const answers = [
         b: `There is hope for you yet! You have not crossed into a level of hipsterdome from which you cannot return. If it is your wish you may take steps to revert your transformation before its too late. Perhaps try drinking some Budweiser this weekend or play a round of golf (NOT SPIKE BALL!), and for the love of god don't get on a slack-line or grow out your moustache. `
     }
 
-}]
+}
 
 
+hipApp.init = () => {
 
+
+    hipApp.eventListeners();
+}
+
+hipApp.yearFind = (userOld) => {
+    const d = new Date();
+    const curYear = d.getFullYear();
+    const userYear = curYear - userOld;
+    return userYear;
+}
+
+hipApp.eventListeners = () => {
+
+    $('form').on('submit', function (e) {
+        e.preventDefault();
+
+        const userName = $('#userName').val();
+        const userAge = $('#userAge').val();
+        const bornYear = hipApp.yearFind(userAge);
+
+        const clothingChoice = $('input[name=userClothing]:checked').val();
+        const passionChoice = $('input[name=userPassion]:checked').val();
+        const musicChoice = $('input[name=userMusic]:checked').val();
+        const kicksChoice = $('input[name=pumpedKicks]:checked').val();
+        
+        const clothingProfile = hipApp.answers.userClothing[clothingChoice];
+        const passionProfile = hipApp.answers.userPassion[passionChoice];
+        const musicProfile = hipApp.answers.musicChoice[musicChoice];
+        const kicksProfile = hipApp.answers.pumpedKicks[kicksChoice];
+        
+        
+
+        if (userAge > 50) {
+
+            const tooOld = `
+            <li>
+                <h4>Tough Pills To Swallow, ${userName}</h4>
+                <p>
+                    Being born in ${bornYear}, you are unlikely too old to be a hipster...and if you consider yourself one - it might be time to take a look at yourself and ask..."Which were the decisions I made over the course of my life that lead me to be exactly where I am today?" and "Am I happy?". 
+                </p>
+                <p>
+                    This application was not made to tell you how to live your life, but since we are here, we are just offering a moment of reflection - we'll leave the living to you!
+                </p>
+            </li>
+            `;
+
+            $('.profilePlace').append(tooOld);
+        }
+        else if (userAge < 18) {
+
+            const tooYoung = `
+            <li>
+                <h4>Tough Pills To Swallow, ${userName}</h4>
+                <p>
+                    We're sorry you've taken the time to fill out our profiling questions only to be informed that being born in ${bornYear} means you are too young to yet be considered for Hipsterdom. You can't even smoke or drink. Now, not all hipsters smoke and/or drink but they are at least old enough to make that choice on there own (The coolest ones dont do either).
+                </p>
+                <p>
+                    But, you need not worry of such things! You should be playing outside and trying to kiss other young people, learning which sports you like and what it is you're good at. Explore your world! With great Hipsterdom comes great responsability, and it's not all fun. You'll have to pay rent and work for your food. Go play tag, or kick the can, the days of easy livin' are numbered.
+                </p>
+            </li>
+            `;
+
+            $('.profilePlace').append(tooYoung);
+        }
+        else {
+
+        }
+       
+       
+        
+
+    })
+}
 //Ask for and store user name
 
 //How old are you?
@@ -53,3 +129,10 @@ const answers = [
 //clothing variable correpsonds with picture in data structure to be displayed upon scroll down
 
 //each varible (userInput) will pull a piece of the blurb from the data structure to put together a full hipster profile 
+    
+
+
+  $(document).ready(function() {
+      hipApp.init();
+    
+  });

@@ -95,12 +95,14 @@ legend {
     box-shadow: -12px 12px 5px 0px rgba(0,0,0,0.75);
 }
 
+.buttonA:hover,
+.buttonA:focus {
+    background-color: lighten($purple, 5%);
+    border-color: $purple;
+    color: $yellow;
+}
+
 .buttonA:active {
     border-left: 2px solid darken($yellow, 5%);
     border-bottom: 2px solid darken($yellow, 5%); 
-}
-.buttonA:hover,
-.buttonA:focus {
-     
-    
 }

@@ -343,6 +343,13 @@ legend {
           box-shadow: -12px 12px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+.buttonA:hover,
+.buttonA:focus {
+  background-color: #360f64;
+  border-color: #2A0C4E;
+  color: #F0E100;
+}
+
 .buttonA:active {
   border-left: 2px solid #d7c900;
   border-bottom: 2px solid #d7c900;
