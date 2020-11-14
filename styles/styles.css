@@ -235,6 +235,28 @@ html {
   overflow: hidden;
 }
 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 html {
   font-size: 62.5%;
   padding: 0;
@@ -356,6 +378,11 @@ legend {
   border-bottom: 2px solid #d7c900;
 }
 
+.rotate {
+  -webkit-animation: spin 2s ease-in-out 1;
+          animation: spin 2s ease-in-out 1;
+}
+
 body {
   font-family: "Open Sans Condensed", sans-serif;
 }
@@ -454,7 +481,7 @@ button[type=submit] {
 }
 
 .profilePlace {
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 3.2rem;
   font-weight: 700;
 }
@@ -701,19 +728,39 @@ input:checked + label::before {
 }
 
 button[type=submit] {
-  cursor: pointer;
   margin: auto;
-  background: #F0E100;
-  border-bottom: 10px solid #d7c900;
+  width: auto;
+  height: auto;
+  padding: 5px 15px;
 }
 
 .profilePlace li {
   margin-bottom: 30px;
-  width: 90%;
+  width: 75% .profilePlace li;
 }
 
-.profilePlace li:last-of-type {
+.profilePlace li :last-of-type {
   margin: 0;
+}
+
+#goTime .container {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.heads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 20%;
+}
+
+.heads img {
+  width: 10%;
 }
 
 footer {

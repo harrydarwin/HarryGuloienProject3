@@ -14,7 +14,7 @@ hipApp.answers = {
         photography: `Have you ever bought an XLR camera or are you more of a polaroid person? Have you read extensivel about Camera Obscura (No not the hipster band), or are you blind to the fact that modern day photography tech does all the work for you. It is unlikely you've ever taken a class or even read up on lighting and yet you are a pro self taught pro. Dont get me wrong there are worse hobbies for a hipster to take up then feeding the ego of nude influencers and hanging out with OnlyFans girls with the pretense of being a photographer, unless of course you are the type to take "ironic" pictures of yourself taking a picture.`,
         food: `"You must come to Chantecler, they've the freshest oysters in the City", words that are less than foreign to you. The foodie hipster with a refined palate and an undying taste for showing your friends new spots around the city. You probably love 416 Snack Bar (fair, who doesn't), and use terms like "farm to table", and invest in putting the most ridiculous culinary creations in to your body. Things infused with beer, or just infused for that matter. You also enjoy ferments or preserves - anything in a old timey jar that tastes like vinigar and herbs.`,
         beer: `Many of your sumer days have been spent in Trinity Bellwoods Park drinking Jelly Kings and Whitsharks (I know you know what I am talking about). You will go out of your way to find the newest brewery to tell your friends about and the stinkier the brew the better. You have likely forgone lagers and pilsners for their much louder friends; IPA, porters and stouts. Despite your having no consistancy to what you like, you do tend to steer towards fancy cans with silly names that contain obscure ingredients. Perhaps a milkshake stout on a fall day or a crispy cool double white IPA with a book on a warm day - Or my personal favourite, a Blood of Cthulu, a 9.5% ABV Imperial Stout with raspberries, cranberries, and tart cherries - ingredients anyone born before 1980 would say doesn't belong in beer but rather in a thanksgiving pie.`,
-        music: `I will bet that you say you "know" people that you have never met or maybe just in passing because somehow that raises your level of worth. The record player you bought from Urban Outfitter has become the focal point of a corner of your appartment along with the obscure records you bought because, "they just sound the best and no other medium can provide that level of authenticity". You probably frequent niche concerts at dirty hidden venues and used to go to The Weekends shows before he made it big. You might even play music for abundantly small crowds in dirty venues yourself but the reality is: the band you played with in highschool was the best you'll ever sound, and the other members all went to university and moved on... why haven't you?`,
+        music: `I will bet that you say you "know" people that you have never met or maybe just in passing because somehow that raises your level of worth. The record player you bought from Urban Outfitter has become the focal point of a corner of your appartment along with the obscure records you bought because, "they just sound the best and no other medium can provide that level of authenticity". You probably frequent niche concerts at dirty hidden venues and used to go to The Weekend's shows before he made it big. You might even play music for abundantly small crowds in dirty venues yourself but the reality is: the band you played with in highschool was the best you'll ever sound, and the other members all went to university and moved on... why haven't you?`,
         literature: `You would prefer to live, laugh, jump off a bridge then to s=hear that book referenced again or worse - see those words written in a frame in someone condo. "Who's condo is this anyway?" you'd think to yourself while skimming their bookshelf (or lack of one), and finding not one copy of 'Perks of Being a Wallflower' or even 'A Clockwork Orange', which you find way better than the movie. To you, most literature that begins as a novel and end as film si doing just that - ending - the book gives so much more detail and much of the story is lost along the way to the screen that we can barely call it a loosely based framework. Oh! The disservice!`
     },
     userMusic: {
@@ -43,7 +43,7 @@ hipApp.init = () => {
 hipApp.scrolly = () => {
     $([document.documentElement, document.body]).animate({
         scrollTop: $("#userProfile").offset().top
-    }, 1500);
+    }, 2000);
 }
 
 //Find the current year and use it to find user born year
@@ -81,6 +81,8 @@ hipApp.eventListeners = () => {
         //use function to check age and run display function if appropriate
         hipApp.ageAppropriate();
         
+        $('button[type=submit]').text(`LOADING...`);
+        $('.heads img').addClass('rotate');
         //run scroll function to show user their answer
         hipApp.scrolly();
   

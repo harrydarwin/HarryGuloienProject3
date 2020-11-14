@@ -107,3 +107,7 @@ legend {
     border-left: 2px solid darken($yellow, 5%);
     border-bottom: 2px solid darken($yellow, 5%); 
 }
+
+.rotate {
+    animation: spin 2s ease-in-out 1;
+}
