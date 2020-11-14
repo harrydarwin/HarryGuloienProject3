@@ -23,8 +23,9 @@
 
                 <div class="egoBox">
                 <div class="egoCheck">
+                    <p class="egoText">Thanks, you're a better person for it!</p>
                     <i class="fas fa-asterisk"></i>
-                    <button class="ego"><img src="./assets/egoCheck.png" alt="Little booth with an attendant where you can check your ego (like a coat check)"></button>
+                    <button type="button" class="ego"><img src="./assets/egoCheck.png" alt="Little booth with an attendant where you can check your ego (like a coat check)"></button>
                 </div>
                 </div>
 
@@ -61,7 +62,7 @@
                     <div class="questionBox">
                         <legend>Which of these garment options best describes you?</legend>
                         <div>
-                            <input type="radio" name="userClothing" id="oldBandTee" value="oldBandTee">
+                            <input type="radio" name="userClothing" id="oldBandTee" value="oldBandTee" aria-required="true" required>
                             <label for="oldBandTee">Old Band Tee!</label>
                         </div>
                         <div>
@@ -91,7 +92,7 @@
                     <div class="questionBox">
                         <legend>Which are you most passionate about?</legend>
                         <div>
-                            <input type="radio" name="userPassion" id="photography" value="photography">
+                            <input type="radio" name="userPassion" id="photography" value="photography" aria-required="true" required>
                             <label for="photography">Photography</label>
                         </div>
                         <div>
@@ -107,8 +108,8 @@
                             <label for="music">Music</label>
                         </div>
                         <div>
-                            <input type="radio" name="userPassion" id="liturature" value="liturature">
-                            <label for="liturature">Liturature</label>
+                            <input type="radio" name="userPassion" id="literature" value="literature">
+                            <label for="literature">Literature</label>
                         </div>
                     </div>
                     <div class="imageContainer image2">
@@ -130,7 +131,7 @@
                     <div class="questionBox">
                         <legend>Whos music floats your meta-physical boat (besides Bon Iver)?</legend>
                         <div>
-                            <input type="radio" name="userMusic" id="manuChao" value="manuChao">
+                            <input type="radio" name="userMusic" id="manuChao" value="manuChao"aria-required="true" required>
                             <label for="manuChao">Manu Chao</label>
                         </div>
                         <div>
@@ -159,7 +160,7 @@
                     <legend>Pumped up kicks? (We'll assume yes).</legend>
                     <div class="flexBox pumpedKicks">
                         <div>
-                            <input type="radio" name="pumpedKicks" id="yes" value="true" checked>
+                            <input type="radio" name="pumpedKicks" id="yes" value="true" checked aria-required="true" required>
                             <label for="yes">Yes!</label>
                         </div>
                         
@@ -187,7 +188,8 @@
     </main>
 
     <footer class="wrapper">
-
+        <h5>Made by Harry Darwin @ <a href="https://junocollege.com">Juno College</a> <a href="https://www.linkedin.com/in/harry-guloien/"><i class="fas fa-head-side-virus"></i></a></h5> <p>Images from <a href='https://www.freepik.com'>www.freepik.com</a></p>
+        
     </footer>
     
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>

@@ -152,3 +152,11 @@ button[type=submit] {
     background: $yellow;
     border-bottom: 10px solid darken($yellow, 5%); 
 }
+
+.profilePlace li {
+    margin-bottom: 30px;
+    width: 90%;
+    &:last-of-type {
+        margin: 0;
+    }
+}

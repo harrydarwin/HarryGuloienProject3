@@ -1,6 +1,6 @@
 const hipApp = {};
 
-//Create data structure based on the questions below
+//Create data structure to hold all possible outcomes
 hipApp.answers = {
     
    userClothing: {
@@ -9,7 +9,7 @@ hipApp.answers = {
         diy: `Probably aspiring to look like Zooey Deschanel but appearing somewhere between that and homeless, you will find beauty in another hipsters garbage - literally. Dumpster diving, thrift shop hunting, grandmas old clothes pilfering to find those special items that are nice but not nice enough that you can't cut, mame, pierce and colour them. You take pride in your ability to turn nothing into something even though the fact your wears are homemade often shows.`,
         formal: `Someone who may not classify themselves as a hipster. Just a person who likes to look clean and presentable - whats wrong with that? It's also not like you only wear collard shirts, you like to switch it up - tomorrow you may rock a more casual button down over a t-shirt or even some pastel shorts. Perhaps a turtle neck for a touch of sophistication while not being overly formal. You prefer glasses to contact lenses but don't appreciate people calling you Steve Jobs when you do wear that snug turtleneck.`,
         redFlannel: `A follower of fashion, you feel original in your choice of garments but as you stand there in your flannel and your rolled up beanie you realise that everone else at the Mumford & Sons concert is also wearing tight jeans on top of their vans. If you're able to grow a full beard, or better yet, a moustache; you probably will. This may be the first time you've considered that in your efforts to be different, you have become exactly the same.`
-    },
+   },
     userPassion: {
         photography: `Have you ever bought an XLR camera or are you more of a polaroid person? Have you read extensivel about Camera Obscura (No not the hipster band), or are you blind to the fact that modern day photography tech does all the work for you. It is unlikely you've ever taken a class or even read up on lighting and yet you are a pro self taught pro. Dont get me wrong there are worse hobbies for a hipster to take up then feeding the ego of nude influencers and hanging out with OnlyFans girls with the pretense of being a photographer, unless of course you are the type to take "ironic" pictures of yourself taking a picture.`,
         food: `"You must come to Chantecler, they've the freshest oysters in the City", words that are less than foreign to you. The foodie hipster with a refined palate and an undying taste for showing your friends new spots around the city. You probably love 416 Snack Bar (fair, who doesn't), and use terms like "farm to table", and invest in putting the most ridiculous culinary creations in to your body. Things infused with beer, or just infused for that matter. You also enjoy ferments or preserves - anything in a old timey jar that tastes like vinigar and herbs.`,
@@ -26,19 +26,27 @@ hipApp.answers = {
         neither: "You could possibly be the worst type of hipster. The hipster who doesn't believe they are a hipster, because you aren't; you're an artist. In fact, hipsters are beneath you, so is pretty much everyone else for that matter. You are an elitest and you don't follow trends, if anything worth your while does come up, you will hear about it from your friends." 
     },
     pumpedKicks: {
-        a: `We'll admit that pumped up kicks is a catchy song but to like it would be to cross the line into real hipsterdome. The fact that you do means it's too late for you, read over the above profile again and get used to it. If it wasn't accurate when you started reading it, it is now, and you might aswell bring a Dave Eggers novel to Ossington and sip an old fashioned or a craft beer through your waxed moustache.`,
-        b: `There is hope for you yet! You have not crossed into a level of hipsterdome from which you cannot return. If it is your wish you may take steps to revert your transformation before its too late. Perhaps try drinking some Budweiser this weekend or play a round of golf (NOT SPIKE BALL!), and for the love of god don't get on a slack-line or grow out your moustache. `
+        true: `We'll admit that pumped up kicks is a catchy song but to like it would be to cross the line into real hipsterdome. The fact that you do means it's too late for you, read over the above profile again and get used to it. If it wasn't accurate when you started reading it, it is now, and you might aswell bring a Dave Eggers novel to Ossington and sip an old fashioned or a craft beer through your waxed moustache.`,
+        false: `There is hope for you yet! You have not crossed into a level of hipsterdome from which you cannot return. If it is your wish you may take steps to revert your transformation before its too late. Perhaps try drinking some Budweiser this weekend or play a round of golf (NOT SPIKE BALL!), and for the love of god don't get on a slack-line or grow out your moustache. `
     }
 
 }
 
-
+// Create app inittialize function to store all other functions 
 hipApp.init = () => {
 
 
     hipApp.eventListeners();
 }
 
+// Scroll function I used on a previous project to move from submit button to user profile 
+hipApp.scrolly = () => {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#userProfile").offset().top
+    }, 1500);
+}
+
+//Find the current year and use it to find user born year
 hipApp.yearFind = (userOld) => {
     const d = new Date();
     const curYear = d.getFullYear();
@@ -46,93 +54,122 @@ hipApp.yearFind = (userOld) => {
     return userYear;
 }
 
+//Create event listener function to hold the submit button and gather all user info
 hipApp.eventListeners = () => {
+    //Ego checker - display small text 
+    $('.ego').on('click', function () {
+        $('.egoText').animate({
+            opacity: 1,
+            fontSize: "2rem",
+            left: '-240px'
+        }, 1500);
+    });
+
+    //Add a double click "Easter Egg" for fun!
+    $('.ego').on('dblclick', function () {
+        $('.egoText').empty().append(`Thats a lot of EGO there partner!`).animate({
+            opacity: 1,
+            fontSize: "2rem",
+            left: '-240px'
+        }, 1500);
+    });
 
     $('form').on('submit', function (e) {
         e.preventDefault();
-
-        const userName = $('#userName').val();
-        const userAge = $('#userAge').val();
-        const bornYear = hipApp.yearFind(userAge);
-
-        const clothingChoice = $('input[name=userClothing]:checked').val();
-        const passionChoice = $('input[name=userPassion]:checked').val();
-        const musicChoice = $('input[name=userMusic]:checked').val();
-        const kicksChoice = $('input[name=pumpedKicks]:checked').val();
+        $('.profilePlace').empty();
         
-        const clothingProfile = hipApp.answers.userClothing[clothingChoice];
-        const passionProfile = hipApp.answers.userPassion[passionChoice];
-        const musicProfile = hipApp.answers.musicChoice[musicChoice];
-        const kicksProfile = hipApp.answers.pumpedKicks[kicksChoice];
+        //use function to check age and run display function if appropriate
+        hipApp.ageAppropriate();
         
+        //run scroll function to show user their answer
+        hipApp.scrolly();
+  
         
-
-        if (userAge > 50) {
-
-            const tooOld = `
-            <li>
-                <h4>Tough Pills To Swallow, ${userName}</h4>
-                <p>
-                    Being born in ${bornYear}, you are unlikely too old to be a hipster...and if you consider yourself one - it might be time to take a look at yourself and ask..."Which were the decisions I made over the course of my life that lead me to be exactly where I am today?" and "Am I happy?". 
-                </p>
-                <p>
-                    This application was not made to tell you how to live your life, but since we are here, we are just offering a moment of reflection - we'll leave the living to you!
-                </p>
-            </li>
-            `;
-
-            $('.profilePlace').append(tooOld);
-        }
-        else if (userAge < 18) {
-
-            const tooYoung = `
-            <li>
-                <h4>Tough Pills To Swallow, ${userName}</h4>
-                <p>
-                    We're sorry you've taken the time to fill out our profiling questions only to be informed that being born in ${bornYear} means you are too young to yet be considered for Hipsterdom. You can't even smoke or drink. Now, not all hipsters smoke and/or drink but they are at least old enough to make that choice on there own (The coolest ones dont do either).
-                </p>
-                <p>
-                    But, you need not worry of such things! You should be playing outside and trying to kiss other young people, learning which sports you like and what it is you're good at. Explore your world! With great Hipsterdom comes great responsability, and it's not all fun. You'll have to pay rent and work for your food. Go play tag, or kick the can, the days of easy livin' are numbered.
-                </p>
-            </li>
-            `;
-
-            $('.profilePlace').append(tooYoung);
-        }
-        else {
-
-        }
-       
-       
-        
-
     })
 }
-//Ask for and store user name
 
-//How old are you?
-//take curdate and subrtract age to find birth year and store
+hipApp.ageAppropriate = () => {
+    //store user name and age
+    const userName = $('#userName').val();
+    const userAge = $('#userAge').val();
+    //padd user age into yearFind function to find their born year (store this)
+    const bornYear = hipApp.yearFind(userAge);  
+
+    //Some simple conditionals for error control on the user age parameter
+    if (userAge > 50) {
+
+        const tooOld = `
+                <li>
+                    <h4>Tough Pills To Swallow, ${userName}</h4>
+                    <p>
+                        Being born in ${bornYear}, you are unlikely too old to be a hipster...and if you consider yourself one - it might be time to take a look at yourself and ask..."Which were the decisions I made over the course of my life that lead me to be exactly where I am today?" and "Am I happy?". 
+                    </p>
+                    <p>
+                        This application was not made to tell you how to live your life, but since we are here, we are just offering a moment of reflection - we'll leave the living to you!
+                    </p>
+                </li>
+                `;
+
+        $('.profilePlace').append(tooOld);
+    }
+    else if (userAge < 18) {
+
+        const tooYoung = `
+                <li>
+                    <h4>Tough Pills To Swallow, ${userName}</h4>
+                    <p>
+                        We're sorry you've taken the time to fill out our profiling questions only to be informed that being born in ${bornYear} means you are too young to yet be considered for Hipsterdom. You can't even smoke or drink. Now, not all hipsters smoke and/or drink but they are at least old enough to make that choice on there own (The coolest ones dont do either).
+                    </p>
+                    <p>
+                        But, you need not worry of such things! You should be playing outside and trying to kiss other young people, learning which sports you like and what it is you're good at. Explore your world! With great Hipsterdom comes great responsability, and it's not all fun. You'll have to pay rent and work for your food. Go play tag, or kick the can, the days of easy livin' are numbered.
+                    </p>
+                </li>
+                `;
+
+        $('.profilePlace').append(tooYoung);
+    }
+    else {
+        //Display user profile with display function
+        hipApp.displayProfile();
+    }
+}
 
 
-//Clothing choice with dropdown menu - Old band T, OMG vintage, Made it myself, A nice collard shirt and a pair of slacks, red plaid flannel obvi
-//store selection in a variable
+//create function to create user profile and display on page
+hipApp.displayProfile = () => {
 
-//Passion selection with dropdown menu - Photography, food, beer/wine, music, literature
-//store selection
+    const clothingChoice = $('input[name=userClothing]:checked').val();
+    const passionChoice = $('input[name=userPassion]:checked').val();
+    const musicChoice = $('input[name=userMusic]:checked').val();
+    const kicksChoice = $('input[name=pumpedKicks]:checked').val();
 
-// music dropdown - Manu Chao, Florence and the Machine, migos, bright eyes or tame impala
-//store selection
+    const clothingProfile = hipApp.answers.userClothing[clothingChoice];
+    const passionProfile = hipApp.answers.userPassion[passionChoice];
+    const musicProfile = hipApp.answers.userMusic[musicChoice];
+    const kicksProfile = hipApp.answers.pumpedKicks[kicksChoice];
+
+    const finalProfile = `
+                    <li>
+                        ${clothingProfile}
+                    </li>
+                    <li>
+                        ${passionProfile}
+                    </li>
+                    <li>
+                        ${musicProfile}
+                    </li>
+                    <li>
+                        ${kicksProfile}
+                    </li>
+                    `;
+
+    $('.profilePlace').append(finalProfile);
+}
 
 
-//Pumped up kicks? radio button (yes or no) store selection
-
-//clothing variable correpsonds with picture in data structure to be displayed upon scroll down
-
-//each varible (userInput) will pull a piece of the blurb from the data structure to put together a full hipster profile 
-    
 
 
+//Document ready and app init!
   $(document).ready(function() {
       hipApp.init();
-    
   });

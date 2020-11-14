@@ -36,4 +36,20 @@ header section {
 .ego {
     height: 100px;
     width: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.ego:hover,
+.ego:focus {
+   box-shadow: -2px -9px 72px 10px rgba(0,0,0,0.75);
+   background: rgb(58,124,165);
+background: radial-gradient(circle, rgba(58,124,165,1) 0%, rgba(0,0,0,0.41266929134935226) 80%);
+}
+
+.egoBox p {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    opacity: 0;
 }

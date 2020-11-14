@@ -246,6 +246,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 footer p {
   margin: 0;
   padding: 0;
@@ -405,6 +406,18 @@ main {
   font-weight: 700;
 }
 
+footer {
+  color: #496F5D;
+}
+
+footer h5 {
+  font-size: 2rem;
+}
+
+footer i {
+  font-size: 2.5rem;
+}
+
 .questionBox {
   font-size: 5rem;
 }
@@ -437,6 +450,12 @@ main {
 button[type=submit] {
   font-family: "Amatic SC", cursive;
   font-size: 8rem;
+  font-weight: 700;
+}
+
+.profilePlace {
+  font-size: 2rem;
+  line-height: 3.2rem;
   font-weight: 700;
 }
 
@@ -484,6 +503,23 @@ header section {
 .ego {
   height: 100px;
   width: 100px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.ego:hover,
+.ego:focus {
+  -webkit-box-shadow: -2px -9px 72px 10px rgba(0, 0, 0, 0.75);
+          box-shadow: -2px -9px 72px 10px rgba(0, 0, 0, 0.75);
+  background: #3a7ca5;
+  background: radial-gradient(circle, #3a7ca5 0%, rgba(0, 0, 0, 0.412669) 80%);
+}
+
+.egoBox p {
+  position: absolute;
+  left: -100px;
+  bottom: 0;
+  opacity: 0;
 }
 
 main section {
@@ -669,4 +705,27 @@ button[type=submit] {
   margin: auto;
   background: #F0E100;
   border-bottom: 10px solid #d7c900;
+}
+
+.profilePlace li {
+  margin-bottom: 30px;
+  width: 90%;
+}
+
+.profilePlace li:last-of-type {
+  margin: 0;
+}
+
+footer {
+  background-color: #777777;
+  text-align: center;
+  margin: 0;
+  padding: 5px 0;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #F0E100;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
