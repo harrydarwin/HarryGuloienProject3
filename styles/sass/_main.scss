@@ -21,7 +21,6 @@ main section:nth-of-type(2n) {
     height: 100%;
     width: 100%;
     align-items: center;
-    // justify-content: space-between;
     & input {
         height: 50px;
         margin-top: 10px;
@@ -126,7 +125,6 @@ input:checked + label::before {
     }
     & div:nth-of-type(2) {
         text-align: end;
-        // padding-right: 65px;
     }
 }
 

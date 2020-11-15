@@ -957,4 +957,15 @@ footer .buttonA {
   .footy {
     margin-bottom: 20px;
   }
+  footer a:hover,
+  footer a:focus {
+    color: #F0E100;
+  }
+  .buttonA:hover,
+  .buttonA:focus {
+    background: #F0E100;
+    border-left: 10px solid #d7c900;
+    border-bottom: 10px solid #d7c900;
+    color: black;
+  }
 }

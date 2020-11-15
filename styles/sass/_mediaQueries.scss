@@ -144,4 +144,18 @@
     .footy {
         margin-bottom: 20px;
     }
+
+    //REMOVE HOVER EFFECTS FOR MOBILE
+    footer a:hover,
+    footer a:focus {
+        color: $yellow;
+    }
+
+    .buttonA:hover,
+    .buttonA:focus {
+      background: $yellow;
+      border-left: 10px solid darken($yellow, 5%);
+        border-bottom: 10px solid darken($yellow, 5%);
+        color: black;
+    }
 }

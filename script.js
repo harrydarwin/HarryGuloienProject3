@@ -6,7 +6,7 @@ hipApp.answers = {
     
    userClothing: {
         oldBandTee: `A little bit grunge and in-touch with music that came out before you were alive. You dont listen to Megadeath when your riding the bus alone but if someone asks about the Megadeath T-shirt you bought at "F As In Frank", you'll tell them you used to run that shit in when you were "younger".`,
-        vintage: `In touch with "real fashion", your jeans are not accessories to show off you're "assets", but rather to suggest your an old soul because while you were born in ${hipApp.bornYear}, you should have been born in the 70's and you don't mind smelling like the inside of your grandmothers vaccuum cleaner.`,
+        vintage: `In touch with "real fashion", your jeans are not accessories to show off you're "assets", but rather to suggest your an old soul because while you were born in the year of <span class="year"></span>, you should have been born in the 70's and you don't mind smelling like the inside of your grandmothers vaccuum cleaner.`,
         diy: `Probably aspiring to look like Zooey Deschanel or Kurt Cobain but appearing somewhere between that and homeless, you will find beauty in another hipsters garbage - literally. Dumpster diving, thrift shop hunting, grandmas old clothes pilfering to find those special items that are nice but not nice enough that you can't cut, mame, pierce and colour them. You take pride in your ability to turn nothing into something even though the fact your wears are homemade often shows.`,
         formal: `Someone who may not classify themselves as a hipster. Just a person who likes to look clean and presentable - whats wrong with that? It's also not like you only wear collard shirts, you like to switch it up - tomorrow you may rock a more casual button down over a t-shirt or even some pastel shorts. Perhaps a turtle neck for a touch of sophistication while not being overly formal. You prefer glasses to contact lenses but don't appreciate people calling you Steve Jobs when you do wear that snug turtleneck.`,
         redFlannel: `A follower of fashion, you feel original in your choice of garments but as you stand there in your flannel and your rolled up beanie you realise that everone else at the Mumford & Sons concert is also wearing tight jeans on top of their vans. If you're able to grow a full beard, or better yet, a moustache; you probably will. This may be the first time you've considered that in your efforts to be different, you have become exactly the same.`
@@ -140,14 +140,15 @@ hipApp.ageAppropriate = () => {
         $('.profilePlace').append(tooYoung);
     }
     else {
+
         //Display user profile with display function
-        hipApp.displayProfile();
+        hipApp.displayProfile(hipApp.bornYear);
     }
 }
 
 
 //create function to create user profile and display on page
-hipApp.displayProfile = () => {
+hipApp.displayProfile = (yearBorn) => {
 
     const clothingChoice = $('input[name=userClothing]:checked').val();
     const passionChoice = $('input[name=userPassion]:checked').val();
@@ -158,7 +159,6 @@ hipApp.displayProfile = () => {
     const passionProfile = hipApp.answers.userPassion[passionChoice];
     const musicProfile = hipApp.answers.userMusic[musicChoice];
     const kicksProfile = hipApp.answers.pumpedKicks[kicksChoice];
-
     const finalProfile = `
                         <h4>You Are...</h4>
                     <li>
@@ -174,9 +174,13 @@ hipApp.displayProfile = () => {
                         ${kicksProfile}
                     </li>
                     `;
-
+    
     $('.profilePlace').append(finalProfile);
     $('.profileSection').addClass('padIt');
+
+    if (clothingChoice == 'vintage') {
+        $('.year').append(yearBorn);
+    }
 }
 
 
