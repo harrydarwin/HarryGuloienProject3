@@ -38,13 +38,16 @@ header section {
     width: 100px;
     cursor: pointer;
     border-radius: 50%;
+    transition: all .3s;
 }
 
 .ego:hover,
 .ego:focus {
-   box-shadow: -2px -9px 72px 10px rgba(0,0,0,0.75);
-   background: rgb(58,124,165);
-background: radial-gradient(circle, rgba(58,124,165,1) 0%, rgba(0,0,0,0.41266929134935226) 80%);
+    transform: scale(1.2);
+}
+
+.ego:active {
+    transform: translateY(-10px);
 }
 
 .egoBox p {

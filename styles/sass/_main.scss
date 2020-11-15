@@ -62,12 +62,6 @@ input[type=radio] {
     cursor: pointer;
 }
 
-
-// .questionBox div:hover label::before,
-// .questionBox div:focus label::before {
-//     background-image: url(../assets/moustacheFull.png);
-// }
-
 input:checked + label::before {
     background-image: url(../assets/moustacheFull.png);
 }
@@ -151,14 +145,29 @@ button[type=submit] {
     width: auto;
     height: auto;
     padding: 5px 15px;
+    cursor: pointer;
+}
+
+.profileSection {
+    height: auto;
+    padding: 0;
+}
+
+h4 {
+    margin-bottom: 20px;
 }
 
 .profilePlace li {
-    margin-bottom: 30px;
-    width: 75%
+    margin-bottom: 20px;
+    width: 90%;
+    text-align: left;
     &:last-of-type {
         margin: 0;
     }
+}
+
+.padIt {
+    padding: 25px 0;
 }
 
 #goTime .container {

@@ -360,8 +360,8 @@ legend {
   border-bottom: 10px solid #d7c900;
   padding-top: 5px;
   text-align: center;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
   -webkit-box-shadow: -12px 12px 5px 0px rgba(0, 0, 0, 0.75);
           box-shadow: -12px 12px 5px 0px rgba(0, 0, 0, 0.75);
 }
@@ -428,6 +428,10 @@ h3 i {
   bottom: 5px;
 }
 
+h4 {
+  font-size: 2.5rem;
+}
+
 main {
   font-family: "Amatic SC", cursive;
   font-weight: 700;
@@ -460,6 +464,10 @@ footer i {
   text-transform: uppercase;
 }
 
+footer .buttonA {
+  font-size: 3rem;
+}
+
 .dataBox label {
   font-size: 7rem;
   font-style: italic;
@@ -484,6 +492,10 @@ button[type=submit] {
   font-size: 2.2rem;
   line-height: 3.2rem;
   font-weight: 700;
+}
+
+footer .buttonA {
+  font-size: 3rem;
 }
 
 header {
@@ -532,14 +544,19 @@ header section {
   width: 100px;
   cursor: pointer;
   border-radius: 50%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .ego:hover,
 .ego:focus {
-  -webkit-box-shadow: -2px -9px 72px 10px rgba(0, 0, 0, 0.75);
-          box-shadow: -2px -9px 72px 10px rgba(0, 0, 0, 0.75);
-  background: #3a7ca5;
-  background: radial-gradient(circle, #3a7ca5 0%, rgba(0, 0, 0, 0.412669) 80%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.ego:active {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .egoBox p {
@@ -732,15 +749,30 @@ button[type=submit] {
   width: auto;
   height: auto;
   padding: 5px 15px;
+  cursor: pointer;
+}
+
+.profileSection {
+  height: auto;
+  padding: 0;
+}
+
+h4 {
+  margin-bottom: 20px;
 }
 
 .profilePlace li {
-  margin-bottom: 30px;
-  width: 75% .profilePlace li;
+  margin-bottom: 20px;
+  width: 90%;
+  text-align: left;
 }
 
-.profilePlace li :last-of-type {
+.profilePlace li:last-of-type {
   margin: 0;
+}
+
+.padIt {
+  padding: 25px 0;
 }
 
 #goTime .container {
@@ -767,7 +799,12 @@ footer {
   background-color: #777777;
   text-align: center;
   margin: 0;
-  padding: 5px 0;
+  padding: 25px 0;
+  position: relative;
+}
+
+.footy {
+  display: inline-block;
 }
 
 footer a:hover,
@@ -775,4 +812,15 @@ footer a:focus {
   color: #F0E100;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+footer .buttonA {
+  height: 40px;
+  width: 200px;
+  position: absolute;
+  right: 25px;
+}
+
+.hideMe {
+  display: none;
 }

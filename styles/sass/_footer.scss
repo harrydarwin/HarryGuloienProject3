@@ -2,11 +2,30 @@ footer {
     background-color: #777777;
     text-align: center;
     margin: 0;
-    padding: 5px 0;
+    padding: 25px 0;
+    // justify-content: space-around;
+    position: relative;
+}
+
+.footy {
+    display: inline-block;
 }
 
 footer a:hover,
 footer a:focus {
     color: $yellow;
     transition: all .5s;
+}
+
+footer .buttonA {
+    height: 40px;
+     width: 200px;
+    //  justify-self: flex-end;
+    position: absolute;
+    right: 25px;
+    
+}
+
+.hideMe {
+    display: none;
 }

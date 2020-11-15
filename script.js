@@ -81,13 +81,20 @@ hipApp.eventListeners = () => {
         //use function to check age and run display function if appropriate
         hipApp.ageAppropriate();
         
+        //add fun loading effect on submit
         $('button[type=submit]').text(`LOADING...`);
         $('.heads img').addClass('rotate');
+        $('footer .buttonA').removeClass('hideMe');
+
+        $('footer .buttonA').on('click', function () {
+            $('button[type=submit]').text(`What type of hipster am I?`);
+            $('.heads img').removeClass('rotate');
+        });
+    
         //run scroll function to show user their answer
         hipApp.scrolly();
-  
         
-    })
+    });
 }
 
 hipApp.ageAppropriate = () => {
@@ -151,6 +158,7 @@ hipApp.displayProfile = () => {
     const kicksProfile = hipApp.answers.pumpedKicks[kicksChoice];
 
     const finalProfile = `
+                        <h4>You Are...</h4>
                     <li>
                         ${clothingProfile}
                     </li>
@@ -166,6 +174,7 @@ hipApp.displayProfile = () => {
                     `;
 
     $('.profilePlace').append(finalProfile);
+    $('.profileSection').addClass('padIt');
 }
 
 

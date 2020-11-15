@@ -9,7 +9,6 @@ header {
 h1 {
     font-family: $miriam;
     font-size: 15rem;
-    // text-align: center;
     & span {
         display: block;
         color: $yellow;
@@ -39,6 +38,10 @@ h3 {
         position: relative;
         bottom: 5px;
     }
+}
+
+h4 {
+    font-size: 2.5rem;
 }
 
 main {
@@ -72,6 +75,10 @@ font-size: 5rem;
     text-transform: uppercase;
 }
 
+footer .buttonA {
+    font-size: 3rem;
+}
+
 .dataBox label {
     font-size: 7rem;
     font-style: italic;
@@ -95,7 +102,9 @@ button[type=submit] {
 .profilePlace {
     font-size: 2.2rem;
     line-height: 3.2rem;
-    font-weight: 700;
-    
+    font-weight: 700; 
 }
 
+footer .buttonA {
+    font-size: 3rem;
+}

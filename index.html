@@ -42,9 +42,9 @@
                             <legend class="srOnly">A little about you</legend>
                                 <div class="dataBox flexColumn">
                                     <label for="userName">What is your name?</label>
-                                    <input type="text" name="userName" id="userName" required>
+                                    <input type="text" name="userName" id="userName" autocomplete="off" required>
                                     <label  for="userAge">How old are you?</label>
-                                    <input type="text" name="userAge" id="userAge"  required>
+                                    <input type="text" name="userAge" id="userAge" autocomplete="off"  required>
                                 </div>
                         </fieldset>
                     </div>
@@ -191,7 +191,7 @@
             </section>
         </form>
 
-        <section id="userProfile">
+        <section id="userProfile" class="profileSection">
             <div class="container">
                 <ul class="profilePlace">
                 </ul>
@@ -200,7 +200,10 @@
     </main>
 
     <footer class="wrapper">
+        <div class="footy">
         <h5>Made by Harry Darwin @ <a href="https://junocollege.com">Juno College</a> <a href="https://www.linkedin.com/in/harry-guloien/"><i class="fas fa-head-side-virus"></i></a></h5> <p>Images from <a href='https://www.freepik.com'>www.freepik.com</a></p>
+        </div>
+        <a class="buttonA hideMe" href="#userInfo">Again?</a>
         
     </footer>
     
