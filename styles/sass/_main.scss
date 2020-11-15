@@ -98,6 +98,9 @@ input:checked + label::before {
 
 #questionTwo {
     position: relative;
+    & legend {
+        max-width: 278px;
+    }
 }
 
 .image2 {
@@ -125,6 +128,10 @@ input:checked + label::before {
         text-align: end;
         // padding-right: 65px;
     }
+}
+
+.q4 legend {
+    max-width: 235px;
 }
 
 .fuming {
@@ -185,6 +192,7 @@ h4 {
     width: 100%;
     height: 20%;
     & img {
-        width: 10%;
+        width: 100px;
+        height: 85px;
     }
 }

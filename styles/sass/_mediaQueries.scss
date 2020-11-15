@@ -32,6 +32,11 @@
         }
     }
 
+    .questionBox label::before {
+        height: 38px;
+        width: 38px;
+    }
+
     .imageContainer {
         width: 30%;
     }
@@ -56,7 +61,7 @@
     }
 
     .q4 legend {
-        margin: auto;
+        margin: 50px auto;
     }
 
     #questionFour {
@@ -65,16 +70,47 @@
 }
 
 @media (max-width: 768px) {
-    
+    header {
+        padding-top: 25px;
+    }
+
     main section,
     #questionFour {
         height: 80vh;
         padding-top: 0;
+        padding-bottom: 30px;
     }
 
-    .imageBox {
-        justify-content: center;
+    h1 {
+        font-size: 10rem;
+        margin: auto;
     }
+
+    .header2 {
+        height: 52vh;
+    }
+
+    .largeH {
+        display: none;
+    }
+
+    .smallH {
+        display: block;
+    }
+
+    .egoBox {
+        display: none;
+    }
+
+    .questionBox {
+        width: 90%;
+    }
+
+
+    .imageBox {
+        justify-content: space-evenly;
+    }
+
 
     .imageContainer {
         display: none;
@@ -83,4 +119,8 @@
     #goTime {
         padding: 25px 0;
     }
+}
+
+@media (max-width: 480px) {
+    
 }
