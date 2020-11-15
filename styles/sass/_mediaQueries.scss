@@ -67,6 +67,17 @@
     #questionFour {
         height: 75vh;
     }
+
+    .q4 legend {
+    max-width: 235px;
+}
+
+
+    footer .buttonA {
+    position: static;
+    margin-left: 20px;
+    
+}
 }
 
 @media (max-width: 768px) {
@@ -122,5 +133,15 @@
 }
 
 @media (max-width: 480px) {
-    
+    h2.smallH {
+        display: none;
+    }
+
+    h3.smallH {
+        position: static;
+    }
+
+    .footy {
+        margin-bottom: 20px;
+    }
 }

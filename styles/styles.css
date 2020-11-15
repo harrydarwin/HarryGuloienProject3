@@ -728,10 +728,6 @@ input:checked + label::before {
   text-align: end;
 }
 
-.q4 legend {
-  max-width: 235px;
-}
-
 .fuming {
   width: 50%;
   justify-self: flex-end;
@@ -893,6 +889,13 @@ footer .buttonA {
   #questionFour {
     height: 75vh;
   }
+  .q4 legend {
+    max-width: 235px;
+  }
+  footer .buttonA {
+    position: static;
+    margin-left: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -934,5 +937,17 @@ footer .buttonA {
   }
   #goTime {
     padding: 25px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h2.smallH {
+    display: none;
+  }
+  h3.smallH {
+    position: static;
+  }
+  .footy {
+    margin-bottom: 20px;
   }
 }
