@@ -88,6 +88,7 @@ hipApp.eventListeners = () => {
 
         $('footer .buttonA').on('click', function () {
             $('button[type=submit]').text(`What type of hipster am I?`);
+            $('form').trigger('reset');
             $('.heads img').removeClass('rotate');
         });
     

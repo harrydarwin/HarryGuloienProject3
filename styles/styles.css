@@ -415,7 +415,6 @@ h2 span {
 }
 
 h3 {
-  font-size: 2.5rem;
   width: 60%;
   position: absolute;
   font-weight: 300;
@@ -428,7 +427,7 @@ h3 i {
   bottom: 5px;
 }
 
-h4 {
+h4, h3 {
   font-size: 2.5rem;
 }
 
@@ -503,9 +502,6 @@ header {
 }
 
 header section {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -585,12 +581,6 @@ main section:nth-of-type(2n) {
   background-color: #3A7CA5;
 }
 
-#userInfo {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 #userInfo .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -606,9 +596,6 @@ main section:nth-of-type(2n) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .dataBox input {
@@ -617,11 +604,11 @@ main section:nth-of-type(2n) {
 }
 
 .dataBox input:first-of-type {
-  width: 50%;
+  width: 280px;
 }
 
 .dataBox input:last-of-type {
-  width: 25%;
+  width: 140px;
 }
 
 input[type=radio] {
@@ -629,6 +616,7 @@ input[type=radio] {
   opacity: 0;
   height: 0;
   width: 0;
+  display: none;
 }
 
 .questionBox label {
@@ -665,6 +653,10 @@ input:checked + label::before {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-left: 50px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 50%;
+  position: relative;
 }
 
 #questionOne {
@@ -691,13 +683,6 @@ input:checked + label::before {
   height: 5px;
   width: auto;
   border-radius: 50%;
-}
-
-.questionBox {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  width: 50%;
-  position: relative;
 }
 
 #questionTwo {
@@ -727,21 +712,30 @@ input:checked + label::before {
   width: 40%;
 }
 
+.pumpedKicks div label {
+  z-index: 2;
+}
+
 .pumpedKicks div:nth-of-type(2) {
   text-align: end;
-  padding-right: 65px;
 }
 
 .fuming {
-  width: 75%;
+  width: 50%;
   justify-self: flex-end;
   position: absolute;
   bottom: 0;
-  right: 13%;
+  right: 25%;
 }
 
 .q4 {
   position: relative;
+  padding-left: 0;
+  width: 70%;
+}
+
+.q4 legend {
+  margin: 0 auto;
 }
 
 button[type=submit] {
@@ -823,4 +817,82 @@ footer .buttonA {
 
 .hideMe {
   display: none;
+}
+
+@media (max-width: 940px) {
+  section {
+    height: 80vh;
+  }
+  main section {
+    padding: 10px 0 20px;
+  }
+  .buttonA {
+    font-size: 4rem;
+    height: 60px;
+    width: 300px;
+  }
+  .firstSection {
+    height: auto;
+  }
+  .dataBox {
+    text-align: center;
+  }
+  .questionBox {
+    font-size: 4rem;
+    width: 60%;
+  }
+  .questionBox label {
+    font-size: 3rem;
+  }
+  .imageContainer {
+    width: 30%;
+  }
+  .imageBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .questionBox,
+  .image2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  #questionTwo .imageBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .questionBox label {
+    margin-left: 60px;
+  }
+  .q4 legend {
+    margin: auto;
+  }
+  #questionFour {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 768px) {
+  main section,
+  #questionFour {
+    height: 80vh;
+    padding-top: 0;
+  }
+  .imageBox {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .imageContainer {
+    display: none;
+  }
+  #goTime {
+    padding: 25px 0;
+  }
 }

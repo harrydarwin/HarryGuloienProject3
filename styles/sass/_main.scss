@@ -10,29 +10,27 @@ main section:nth-of-type(2n) {
     background-color: $blue;
 }
 
-#userInfo {
-    justify-content: space-between;
-    & .container {
+#userInfo .container {
         align-items: center;
         justify-content: space-around;
         height: 100%;
     }
-}
+
 
 .dataBox {
     height: 100%;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     & input {
         height: 50px;
         margin-top: 10px;
     }
     & input:first-of-type {
-        width: 50%;
+        width: 280px;
     }
     & input:last-of-type {
-        width: 25%;
+        width: 140px;
     }
 }
 
@@ -41,6 +39,7 @@ input[type=radio] {
     opacity: 0;
     height: 0;
     width: 0;
+    display: none;
 }
 
 
@@ -72,6 +71,9 @@ input:checked + label::before {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 50px;
+    align-self: flex-start;
+    width: 50%;
+    position: relative;
 }
 
 #questionOne {
@@ -92,12 +94,6 @@ input:checked + label::before {
     height: 5px;
     width: auto;
     border-radius: 50%;
-}
-
-.questionBox {
-    align-self: flex-start;
-    width: 50%;
-    position: relative;
 }
 
 #questionTwo {
@@ -121,23 +117,32 @@ input:checked + label::before {
     bottom: 20%;
     & div {
         width: 40%;
+        & label {
+            z-index: 2;
+        }
     }
     & div:nth-of-type(2) {
         text-align: end;
-        padding-right: 65px;
+        // padding-right: 65px;
     }
 }
 
 .fuming {
-    width: 75%;
+    width: 50%;
     justify-self: flex-end;
     position:absolute;
     bottom: 0;
-    right: 13%;
+    right: 25%;
+
 }
 
 .q4 {
     position: relative;
+    padding-left: 0;
+    width: 70%;
+    & legend {
+        margin: 0 auto;
+    }
 }
 
 button[type=submit] {

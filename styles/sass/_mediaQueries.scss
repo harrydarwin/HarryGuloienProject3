@@ -1,0 +1,86 @@
+//MEDIA QUERIES for TABLET (940px)
+
+@media (max-width: 940px) {
+
+    section {
+        height: 80vh;
+    }
+
+    main section {
+        padding: 10px 0 20px;
+    }
+
+    .buttonA {
+        font-size: 4rem;
+        height: 60px;
+        width: 300px;
+    }
+
+    .firstSection {
+        height: auto;
+    }
+
+    .dataBox {
+        text-align: center;
+    }
+
+    .questionBox {
+        font-size: 4rem;
+        width: 60%;
+        & label {
+            font-size: 3rem;
+        }
+    }
+
+    .imageContainer {
+        width: 30%;
+    }
+
+    .imageBox {
+        flex-direction: column-reverse;
+        align-content: center;
+    }
+
+    .questionBox,
+    .image2 {
+        align-self: center;
+    }
+
+
+    #questionTwo .imageBox {
+        flex-direction: column;
+    }
+
+    .questionBox label {
+        margin-left: 60px;
+    }
+
+    .q4 legend {
+        margin: auto;
+    }
+
+    #questionFour {
+        height: 75vh;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    main section,
+    #questionFour {
+        height: 80vh;
+        padding-top: 0;
+    }
+
+    .imageBox {
+        justify-content: center;
+    }
+
+    .imageContainer {
+        display: none;
+    }
+
+    #goTime {
+        padding: 25px 0;
+    }
+}
