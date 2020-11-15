@@ -133,6 +133,12 @@
 }
 
 @media (max-width: 480px) {
+
+    main section,
+    #questionFour {
+        height: 80vh;
+    }
+    
     h2.smallH {
         display: none;
     }
@@ -143,10 +149,6 @@
 
     .footy {
         margin-bottom: 20px;
-    }
-
-    main section {
-        height: 90vh;
     }
 
     //REMOVE HOVER EFFECTS FOR MOBILE
