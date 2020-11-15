@@ -33,6 +33,8 @@ hipApp.answers = {
 
 }
 
+hipApp.egoArray = ["That was a heavy one!", "You should check that more often!", "you carry that thing around?", "Delicious!", "Feed me ego!", "You won't need that here!", "Anything else you wanna check?", "Your ego is not your amigo!", "Gross..."];
+
 // Create app inittialize function to store all other functions 
 hipApp.init = () => {
 
@@ -55,11 +57,21 @@ hipApp.yearFind = (userOld) => {
     return userYear;
 }
 
+//randomizer function for ego check station outputs
+hipApp.randomizer = (arr) => {
+    //write math to give a random number within the length of the array 
+    const randomIndex = Math.floor(Math.random() * arr.length);
+
+    //pass that number into the index of the array
+    return arr[randomIndex];
+}
+
 //Create event listener function to hold the submit button and gather all user info
 hipApp.eventListeners = () => {
     //Ego checker - display small text 
     $('.ego').on('click', function () {
-        $('.egoText').animate({
+        const egoPhrase = hipApp.randomizer(hipApp.egoArray)
+        $('.egoText').empty().append(egoPhrase).animate({
             opacity: 1,
             fontSize: "2rem",
             left: '-240px'
@@ -91,6 +103,7 @@ hipApp.eventListeners = () => {
             $('button[type=submit]').text(`What type of hipster am I?`);
             $('form').trigger('reset');
             $('.heads img').removeClass('rotate');
+            $('.egoText').empty();
         });
     
         //run scroll function to show user their answer
