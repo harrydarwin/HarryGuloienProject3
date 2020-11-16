@@ -9,36 +9,36 @@
     <title>Hipster Me Project 3</title>
 </head>
 <body>
-    <header class="wrapper" id="home">
-        <section class="firstSection flexColumn">
-            <div class="container">
-                <h1>What Type of <span>Hipster</span> Are You?</h1>
-            </div>
-        </section>
-        <section class="flexColumn header2 container">
-
-                <h2 class="largeH">Use <span>Hipster Me</span> to find your true <span>hipster profile</span></h2>
-                <h2 class="smallH">Find your <span>hipster profile</span></h2>
-                <h3 class="largeH"><i class="fas fa-asterisk"></i>While our intention is not to hurt feelings, our expert profilers do tend to come of a little rude. If you need to hang your ego at the door please use our Ego-Check Station</h3>
-                <h3 class="smallH"><i class="fas fa-user-check"></i>Please check your ego, our profiles may come off rude</h3>
-
-                <div class="egoBox">
-                <div class="egoCheck">
-                    <p class="egoText">Thanks, you're a better person for it!</p>
-                    <i class="fas fa-asterisk"></i>
-                    <button type="button" class="ego"><img src="./assets/egoCheck.png" alt="Little booth with an attendant where you can check your ego (like a coat check)"></button>
+    <header id="home">
+            <section class="firstSection flexColumn">
+                <div class="wrapper">
+                    <div class="container">
+                        <h1>What Type of <span>Hipster</span> Are You?</h1>
+                    </div>
                 </div>
-                </div>
+            </section>
+            <section class="flexColumn header2 wrapper">
+                    <h2 class="largeH">Use <span>Hipster Me</span> to find your true <span>hipster profile</span></h2>
+                    <h2 class="smallH">Find your <span>hipster profile</span></h2>
+                    <h3 class="largeH"><i class="fas fa-asterisk"></i>While our intention is not to hurt feelings, our expert profilers do tend to come of a little rude. If you need to hang your ego at the door please use our Ego-Check Station</h3>
+                    <h3 class="smallH"><i class="fas fa-user-check"></i>Please check your ego, our profiles may come off rude</h3>
 
-                <a class="buttonA" href="#userInfo"><span>Profile Me!</span></a>
+                    <div class="egoBox">
+                    <div class="egoCheck">
+                        <p class="egoText">Thanks, you're a better person for it!</p>
+                        <i class="fas fa-asterisk"></i>
+                        <button type="button" class="ego"><img src="./assets/egoCheck.png" alt="Little booth with an attendant where you can check your ego (like a coat check)"></button>
+                    </div>
+                    </div>
 
-        </section>
+                    <a class="buttonA" href="#userInfo"><span>Profile Me!</span></a>
+            </section>
     </header>
 
-    <main class="wrapper">
+    <main>
         <form>
-            <section id="userInfo" class="flexColumn">
-                <div class="container flexColumn">
+            <section id="userInfo">
+                <div class="flexColumn wrapper">
                         <fieldset>
                             <legend class="srOnly">A little about you</legend>
                                 <div class="dataBox flexColumn">
@@ -54,7 +54,7 @@
             </section>
 
             <section id="questionOne" class="flexColumn">
-                <div class="container imageBox flexBox">
+                <div class="wrapper imageBox flexBox">
                     <div class="imageContainer">
                         <img src="./assets/phoneHipster.png" alt="Very hip gentlemen with a beard holding a cellphone">
                         <div class="imageBorder">
@@ -89,7 +89,7 @@
             </section>
             
             <section id="questionTwo">
-                <div class="container imageBox flexBox">
+                <div class="wrapper imageBox flexBox">
                     <div class="questionBox">
                         <legend>Which are you most passionate about?</legend>
                         <div>
@@ -123,7 +123,7 @@
             </section>
 
             <section id="questionThree">
-                <div class="container imageBox flexBox">
+                <div class="wrapper imageBox flexBox">
                     <div class="imageContainer">
                         <img src="./assets/purpleHipster.png" alt="Hip lady with purple hair and glasses">
                         <div class="imageBorder">
@@ -170,38 +170,44 @@
                             <label for="no">No!</label>
                         </div>
                     </div>
-                    <img class="fuming" src="./assets/fumingHipster.png" alt="confused hipster with fumes coming from his head">
+                    <div class="buttonBox">
+                        <img class="fuming" src="./assets/fumingHipster.png" alt="confused hipster with fumes coming from his head">
+                        <a class="buttonA" href="#goTime"><span class="buttonText">Next!</span></a>
+                    </div>
                 </div>
-                <a class="buttonA" href="#goTime"><span class="buttonText">Next!</span></a>
             </section>
 
             <section id="goTime">
-                    <div class="container flexColumn">
-                    <div class="heads">
-                        <img src="./assets/hipheads (1).png" alt="Cartoon hipster face">
-                        <img src="./assets/hipheads (2).png" alt="Cartoon hipster face">
-                        <img src="./assets/hipheads (3).png" alt="Cartoon hipster face">
-                    </div>
-                    <button class="buttonA" type="submit">What type of hipster am I?</button>
-                    <div class="heads">
-                        <img src="./assets/hipheads (4).png" alt="Cartoon hipster face">
-                        <img src="./assets/hipheads (5).png" alt="Cartoon hipster face">
-                        <img src="./assets/hipheads (6).png" alt="Cartoon hipster face">
+                <div class="wrapper">
+                        <div class="container flexColumn">
+                        <div class="heads">
+                            <img src="./assets/hipheads (1).png" alt="Cartoon hipster face">
+                            <img src="./assets/hipheads (2).png" alt="Cartoon hipster face">
+                            <img src="./assets/hipheads (3).png" alt="Cartoon hipster face">
+                        </div>
+                        <button class="buttonA" type="submit">What type of hipster am I?</button>
+                        <div class="heads">
+                            <img src="./assets/hipheads (4).png" alt="Cartoon hipster face">
+                            <img src="./assets/hipheads (5).png" alt="Cartoon hipster face">
+                            <img src="./assets/hipheads (6).png" alt="Cartoon hipster face">
+                        </div>
                     </div>
                 </div>
             </section>
         </form>
 
         <section id="userProfile" class="profileSection">
-            <div class="container">
+            <div class="wrapper">
+                <div class="container">
                 <ul class="profilePlace">
                 </ul>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="wrapper">
-        <div class="footy">
+    <footer>
+        <div class="footy wrapper">
         <h5>Made by Harry Darwin @ <a href="https://junocollege.com">Juno College</a> <a href="https://www.linkedin.com/in/harry-guloien/"><i class="fas fa-head-side-virus"></i></a></h5> <p>Images from <a href='https://www.freepik.com'>www.freepik.com</a></p>
         </div>
         <a class="buttonA hideMe" href="#userInfo">Again?</a>
