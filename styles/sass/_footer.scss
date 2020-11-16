@@ -8,6 +8,7 @@ footer {
 
 .footy {
     justify-content: space-evenly;
+    margin: 0 auto;
 }
 
 footer a:hover,
@@ -18,11 +19,7 @@ footer a:focus {
 
 footer .buttonA {
     height: 40px;
-    width: 200px;
-    // position: absolute;
-    // right: 50px;
-    // top: 25px;
-    
+    width: 200px;    
 }
 
 .hideMe {

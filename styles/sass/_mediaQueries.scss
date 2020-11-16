@@ -154,18 +154,14 @@
         position: static;
     }
 
+    .dataBox {
+        justify-content: flex-end;
+    }
    .dataBox input {
     font-size: 3rem;
     &:first-of-type {
         margin-bottom: 10px;
     }
-    &:last-of-type {
-        margin-bottom: 20px;
-    }
-   }
-
-   .imageBox:nth-of-type(2) {
-       padding-top: 50px;
    }
 
    .hipType {

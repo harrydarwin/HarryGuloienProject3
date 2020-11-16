@@ -82,7 +82,9 @@ input:checked + label::before {
     position: relative;
 }
 
-#questionOne {
+#questionOne,
+#questionTwo,
+#questionThree {
     justify-content: space-between;
 }
 
