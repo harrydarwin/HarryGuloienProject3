@@ -837,7 +837,9 @@ footer {
 }
 
 .footy {
-  display: inline-block;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 footer a:hover,
@@ -850,8 +852,6 @@ footer a:focus {
 footer .buttonA {
   height: 40px;
   width: 200px;
-  position: absolute;
-  right: 25px;
 }
 
 .hideMe {

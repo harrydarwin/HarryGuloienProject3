@@ -7,7 +7,7 @@ footer {
 }
 
 .footy {
-    display: inline-block;
+    justify-content: space-evenly;
 }
 
 footer a:hover,
@@ -19,8 +19,9 @@ footer a:focus {
 footer .buttonA {
     height: 40px;
     width: 200px;
-    position: absolute;
-    right: 25px;
+    // position: absolute;
+    // right: 50px;
+    // top: 25px;
     
 }
 
