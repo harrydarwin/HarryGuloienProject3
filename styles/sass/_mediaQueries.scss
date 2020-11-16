@@ -122,7 +122,6 @@
 
     .questionBox {
         width: 90%;
-        margin-bottom: 25px;
     }
 
 
@@ -157,9 +156,21 @@
 
    .dataBox input {
     font-size: 3rem;
+    &:first-of-type {
+        margin-bottom: 10px;
+    }
+    &:last-of-type {
+        margin-bottom: 20px;
+    }
    }
 
+   .imageBox:nth-of-type(2) {
+       padding-top: 50px;
+   }
 
+   .hipType {
+     justify-content: center;;
+   }
 
     .footy {
         margin-bottom: 20px;

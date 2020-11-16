@@ -777,7 +777,7 @@ input:checked + label::before {
 }
 
 button[type=submit] {
-  margin: 100px auto;
+  margin: 50px auto;
   width: 60%;
   height: auto;
   padding: 5px 15px;
@@ -962,7 +962,6 @@ footer .buttonA {
   }
   .questionBox {
     width: 90%;
-    margin-bottom: 25px;
   }
   .imageBox {
     -webkit-box-pack: space-evenly;
@@ -990,6 +989,20 @@ footer .buttonA {
   }
   .dataBox input {
     font-size: 3rem;
+  }
+  .dataBox input:first-of-type {
+    margin-bottom: 10px;
+  }
+  .dataBox input:last-of-type {
+    margin-bottom: 20px;
+  }
+  .imageBox:nth-of-type(2) {
+    padding-top: 50px;
+  }
+  .hipType {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .footy {
     margin-bottom: 20px;
