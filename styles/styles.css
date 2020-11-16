@@ -958,11 +958,8 @@ footer .buttonA {
   h3.smallH {
     position: static;
   }
-  .questionBox {
+  .dataBox input {
     font-size: 3rem;
-  }
-  .questionBox label {
-    font-size: 2.5rem;
   }
   .footy {
     margin-bottom: 20px;
