@@ -141,9 +141,17 @@
 
 @media (max-width: 480px) {
 
-    main section,
-    #questionFour {
-        height: 90vh;
+    // main section,
+    // #questionFour {
+    //     height: 90vh;
+    // }
+
+    .dataBox label {
+        font-size: 3rem;
+    }
+
+    section {
+        height: initial;
     }
 
     h2.smallH {
