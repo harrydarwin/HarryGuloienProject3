@@ -37,7 +37,8 @@ hipApp.egoArray = ["That was a heavy one!", "You should check that more often!",
 
 // Create app inittialize function to store all other functions 
 hipApp.init = () => {
-
+    // let vh = window.innerHeight * 0.01;
+    // document.documentElement.style.setProperty('--vh', `${vh}px`);
 
     hipApp.eventListeners();
 }
