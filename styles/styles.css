@@ -938,9 +938,6 @@ footer .buttonA {
   header {
     padding-top: 25px;
   }
-  .imageBox:first-of-type {
-    padding-top: 100px;
-  }
   main section,
   #questionFour {
     height: 100vh;
@@ -980,7 +977,7 @@ footer .buttonA {
 }
 
 @media (max-width: 480px) {
-  #questionTwo .imageBox {
+  .imageBox {
     padding-top: 30px;
   }
   .dataBox label {
@@ -988,7 +985,7 @@ footer .buttonA {
   }
   section {
     min-height: -webkit-fill-available;
-    height: 100vh;
+    height: 90vh;
   }
   h2.smallH {
     display: none;
