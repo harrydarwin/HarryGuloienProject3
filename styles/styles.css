@@ -984,7 +984,6 @@ footer .buttonA {
     font-size: 4rem;
   }
   section {
-    min-height: -webkit-fill-available;
     height: 90vh;
   }
   h2.smallH {
